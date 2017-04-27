@@ -9,8 +9,7 @@
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
                     <li><a href="<?php echo $link['accueil']; ?>">Accueil</a></li>
-                    <li><a href="">Les sports</a></li>
-                    <li><a href="">Recherche partenaire</a></li>
+                    <li><a href="<?php echo $link['annonces']; ?>">Annonces</a></li>
                  </ul>
             </div>
         </div>

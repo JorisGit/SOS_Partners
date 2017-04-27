@@ -29,11 +29,3 @@
 .navbar-inverse a.navbar-brand:hover {
     color: #bae2ff;
 }
-
-
-/* Carousel */
-
-.carousel-page>img.img-responsive {
-    height: 500px;
-    width: 100%;
-}

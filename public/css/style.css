@@ -1,0 +1,24 @@
+/* Carousel */
+
+.carousel-page {
+    width: 100%;
+    height: 450px;
+    background-color: #5f666d;
+    color: #fff;
+}
+
+
+/* Inscription */
+
+#inscription>.form:before {
+    top: 10px;
+    left: 8px;
+    width: 50%;
+    height: 130px;
+    box-shadow: -7px 0 10px #555;
+    transform: rotate(-5deg);
+}
+
+#inscription>.form:after {
+    display: none;
+}
