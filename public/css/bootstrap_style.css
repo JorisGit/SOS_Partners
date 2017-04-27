@@ -1,0 +1,39 @@
+/* Navbar */
+
+.navbar {
+    margin-bottom: 0px;
+}
+
+@media (min-width: 768px) {
+    .navbar {
+        border-radius: 0px;
+    }
+}
+
+.navbar-inverse {
+    background-color: #1c76ab;
+    border-color: #1c76ab;
+}
+
+.navbar-inverse:hover {
+    background-color: #186f8a;
+    border-color: #186f8a;
+}
+
+.navbar-inverse .navbar-nav>li>a,
+.navbar-inverse a.navbar-brand {
+    color: #fff;
+}
+
+.navbar-inverse .navbar-nav>li>a:hover,
+.navbar-inverse a.navbar-brand:hover {
+    color: #bae2ff;
+}
+
+
+/* Carousel */
+
+.carousel-page>img.img-responsive {
+    height: 500px;
+    width: 100%;
+}
