@@ -1,0 +1,8 @@
+# On suit les liens symboliques
+Options +FollowSymlinks
+
+# Activation du mod rewrite d'Apache 
+RewriteEngine On
+
+# Réécriture pour les pages
+RewriteRule ^([a-zA-Z0-9\-\_\/]+)$ index.php?p=$1
