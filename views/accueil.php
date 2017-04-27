@@ -30,10 +30,10 @@
         </div>     
     </div>
     <!-- Contrôles -->
-    <a class="left carousel-control" href="#my_carousel" data-slide="prev">
+    <a class="left carousel-control" href="#bjn-carousel" data-slide="prev">
         <span class="glyphicon glyphicon-chevron-left"></span>
     </a>
-    <a class="right carousel-control" href="#my_carousel" data-slide="next">
+    <a class="right carousel-control" href="#bjn-carousel" data-slide="next">
         <span class="glyphicon glyphicon-chevron-right"></span>
     </a>
 </div>
