@@ -9,23 +9,17 @@
     <div class="carousel-inner">
         <!-- Page 1 -->
         <div class="item active">
-            <div class="carousel-page">
-                <img src="<?php echo $path['img']; ?>slider1.jpg" class="img-responsive" style="margin:0px auto;" />
-            </div>
+            <img src="<?php echo $path['img']; ?>slider1.jpg" class="img-responsive" style="width: 100%;"/>
             <div class="carousel-caption">Trouvez votre bonheur dans le sport</div>
         </div>
         <!-- Page 2 -->
         <div class="item">
-            <div class="carousel-page">
-                <img src="<?php echo $path['img']; ?>slider2.jpg" class="img-responsive" style="margin:0px auto;"  />
-            </div>
-        <div class="carousel-caption">Dépassez vos limites</div>
+            <img src="<?php echo $path['img']; ?>slider2.jpg"  class="img-responsive" style="width: 100%;"/>
+             <div class="carousel-caption">Dépassez vos limites</div>
         </div>
         <!-- Page 3 -->
         <div class="item">
-            <div class="carousel-page">
-                <img src="<?php echo $path['img']; ?>slider3.jpg" class="img-responsive img-rounded" style="margin:0px auto;"  />
-            </div>
+            <img src="<?php echo $path['img']; ?>slider3.jpg" style="width: 100%;"/>
             <div class="carousel-caption">Trouvez votre partenaire de sport</div>
         </div>
     </div>
