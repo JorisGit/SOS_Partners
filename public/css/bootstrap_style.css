@@ -47,7 +47,7 @@ h1,h2,h3{
     letter-spacing: 1.5px;
 }
 
-.navbar li a {
+.navbar li>a {
     color: #fff !important;
 }
 .navbar-nav li a:hover, .navbar-nav li.active a{
@@ -89,4 +89,28 @@ h1,h2,h3{
 .navbar-inverse .navbar-nav>li>a:hover,
 .navbar-inverse a.navbar-brand:hover {
     color: #bae2ff;
+}
+
+/* Login */
+
+#login-dp{
+    min-width : 250px;
+    padding: 14px 14px 0;
+    margin-right: 24px;
+}
+
+#login-dp .bottom{
+    border-top: 1px solid #ddd;
+    clear: both;
+    padding: 7px;
+    font-style: initial;
+    font-size: 12px;
+}
+ 
+.dropdown-toggle{
+    margin-right: 24px;
+}
+
+#login-dp .checkbox{
+    font-size: 12px;
 }
