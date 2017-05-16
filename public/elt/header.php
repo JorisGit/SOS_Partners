@@ -41,9 +41,15 @@
                                                 </div> 
                                             </form>
                                         </div>
+                                        <?php 
+                                            if(substr_compare($_SERVER['REQUEST_URI'], $link['inscription'], strlen($link['inscription'])*-1, strlen($link['inscription']))) {
+                                        ?>
                                         <div class="bottom text-center">
-                                           Pas encore inscrit ? <a href="#"><b>Inscription</b></a>
+                                           Pas encore inscrit ? <a href="<?php echo $page['inscription']; ?>"><b>Inscription</b></a>
                                         </div>
+                                        <?php
+                                            }
+                                        ?>
                                     </div>
                                 </li>
                             </ul>   
