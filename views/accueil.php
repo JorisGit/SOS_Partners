@@ -3,11 +3,11 @@
     <div class="container-fluid">
         <div class="container"> 
             <div class="row">
-                <div class="col-md-4">
+                <div class="col-md-4 col-xs-12 center">
                     <img src="<?php echo $path['img'].'sectionaccueil1.jpg'; ?>" alt="">
                 </div>
-                <div class="col-md-8">
-                    <h2>SOS Partner</h2>
+                <div class="col-md-8 col-xs-12">
+                    <h2 class="center">SOS Partner</h2>
                     <p>Vous êtes sportif régulier, du dimanche ou expérimenté? Alors bienvenue dans SOS Partner, le site de rencontre sportif en France. Découvrez des membres qui pratiquent le même sport     que vous: des boxeurs, des athlètes, des lutteurs, des danseuses étoiles, des passionnés de randos, des skieurs, des nageurs... Envoyez leur des balles pour attirer leur attention et  discutez avec eux. Il va y avoir du sport ... et plus si affinités.</p>
                 </div>
             </div>
