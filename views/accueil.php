@@ -1,4 +1,5 @@
 <section id="home">
+    <img src="<?php echo $path['img'].'main-3.jpg'; ?>" class="img-responsive" alt="">
     <div class="container-fluid">
         <div class="container"> 
             <div class="row">
