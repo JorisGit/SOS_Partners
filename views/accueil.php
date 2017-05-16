@@ -1,7 +1,6 @@
 <section id="home">
     <div id="head">
         <img src="<?php echo $path['img'].'main-3.jpg'; ?>" class="img-responsive" id="main-image" alt="">
-
     </div>
     <div class="container-fluid">
         <div class="container"> 
