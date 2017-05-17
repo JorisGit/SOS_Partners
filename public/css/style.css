@@ -17,6 +17,11 @@ h3 {
     font-weight: bold;
 }
 
+#home h2,
+#inscription h2 {
+    font-family: 'Lobster';
+}
+
 .center {
     text-align: center;
 }
@@ -25,8 +30,89 @@ h3 {
     background-color: #DAFBFE;
 }
 
+.spacerow {
+    margin-top: 40px;
+}
+
 header {
     height: 50px;
+}
+
+.rowspace {
+    margin-top: 40px;
+}
+
+
+/* SOS form */
+
+.sos-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.sos-form h3 {
+    position: relative;
+    bottom: 25px;
+    font-family: 'Lobster';
+    text-align: center;
+    width: 100%;
+}
+
+.sos-form input[type="text"],
+.sos-form input[type="password"],
+.sos-form input[type="email"],
+.sos-form select {
+    border-left: 5px solid #3441FF;
+    border-top: 1px solid #6E6E6F;
+    border-bottom: 1px solid #6E6E6F;
+    border-right: 1px solid #6E6E6F;
+    border-radius: 0px 8px 8px 0px;
+    box-shadow: 3px;
+    padding: 12px;
+    font-size: 16px;
+}
+
+.sos-form select {
+    padding-right: 10px;
+}
+
+.sos-form input[type="text"].datenaissance {
+    padding: 12px;
+}
+
+.form-grp {
+    display: flex;
+    flex-direction: column;
+    margin: 10px 0px;
+}
+
+.form-grp label {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.sos-form-brd {
+    background-color: #E4E9F9;
+    border: 1px double black;
+    border-radius: 4px;
+    -moz-box-shadow: inset 0 0 8px #6E6E6F;
+    -webkit-box-shadow: inset 0 0 8px #6E6E6F;
+    box-shadow: inset 0 0 8px #6E6E6F;
+    padding: 50px;
+}
+
+.sos-form .datenaissance input[type="text"] {
+    border-left: 1px solid #6E6E6F;
+    border-radius: 4px;
+}
+
+.sos-form .datenaissance input[type="text"].jourmois {
+    width: 25%;
+    margin-right: 7px;
+}
+
+.sos-form .datenaissance input[type="text"].annee {
+    width: 43.63%;
 }
 
 
@@ -81,6 +167,7 @@ footer {
 
 .footer-ul li a:hover {
     transition: color 0.2s linear 0s, background 0.2s linear 0s;
+    text-decoration: none;
     color: #8CFACE;
 }
 
@@ -149,10 +236,6 @@ footer {
 
 /* Accueil */
 
-#home h2 {
-    font-family: 'Lobster';
-}
-
 #home p {
     font-size: 17px;
 }
@@ -164,22 +247,7 @@ footer {
 
 /* Inscription */
 
-#inscription>.form:before {
-    top: 10px;
-    left: 8px;
-    width: 50%;
-    height: 130px;
-    box-shadow: -7px 0 10px #555;
-    transform: rotate(-5deg);
+#inscription {
+    margin-top: 5%;
+    margin-bottom: 5%;
 }
-
-#inscription>.form:after {
-    display: none;
-}
-
-#main-image {
-    background-image: ;
-}
-
-
-/* Inscription */
