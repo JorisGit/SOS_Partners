@@ -21,7 +21,7 @@
                                 <li>
                                     <div class="row">
                                         <div class="col-md-12">
-                                            <form class="form" role="form" method="post" action="#" accept-charset="UTF-8" id="login-nav">
+                                            <form class="form" role="form" method="post" action="" accept-charset="UTF-8" id="login-nav">
                                                 <div class="form-group">
                                                     <label class="sr-only" for="exampleInputEmail2">Email</label>
                                                     <input type="email" class="form-control" id="exampleInputEmail2" name="email" placeholder="Email" required>
@@ -31,7 +31,7 @@
                                                     <input type="password" class="form-control" id="exampleInputPassword2" name="mdp" placeholder="Mot de passe" required>
                                                     <div class="help-block text-right"><a href="#">Mot de passe oublié ?</a></div>
                                                 </div>
-                                                <div class="form-group">
+                                                <div class="form-group">    
                                                     <button type="submit" name="valider" class="btn btn-primary btn-block">Connexion</button>
                                                 </div>
                                                 <div class="checkbox">
