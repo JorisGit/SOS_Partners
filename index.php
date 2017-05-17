@@ -6,6 +6,9 @@ $p = (isset($_GET['p'])) ? $_GET['p'] : 'index';
 
 include_once 'include/define.php';
 
+include_once $path['controllers'].'global.php';
+
+
 //controllers
 switch($p) {
     case $page['accueil']:
