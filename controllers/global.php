@@ -13,7 +13,7 @@ require 'models/global.php';
         if($exist == false){
             $erreur = "Erreur d'email ou de mot de passe";
         }else{
-            
+            echo $_SESSION['pseudo'];
         }
     }
     
