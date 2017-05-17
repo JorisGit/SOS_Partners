@@ -14,6 +14,30 @@
                     <li><a href="<?php echo $link['accueil']; ?>">Accueil</a></li>
                     <li><a href="<?php echo $link['annonces']; ?>">Annonces</a></li>
                  </ul>
+                 <?php if(isset($_SESSION['pseudo'])){?>
+                    <ul class="nav navbar-nav navbar-right">
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><b><?php echo $_SESSION['pseudo'] ?></b> <span class="caret"></span></a>
+                            <ul id="login-dp" class="dropdown-menu">
+                                <li>
+                                    <div class="row">
+                                        <div class="avatarHeader">
+                                            <img src="<?php echo $path['img'].'avatars/'.$_SESSION['avatar'];?>" class="avatar img-circle img-thumbnail" alt="avatar" style="width:50%;">
+                                        </div>
+                                        <div class="bottom text-center">
+                                            <span class="glyphicon glyphicon-user" aria-hidden="true"> </span>
+                                            <a href=""><b>Profil</b></a>
+                                        </div>
+                                        <div class="bottom text-center">
+                                            <span class="glyphicon glyphicon-off" aria-hidden="true"> </span>
+                                            <a href="<?php echo $link['deconnexion']; ?>"><b>Se deconnecter</b></a>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>   
+                    </li>
+                </ul>
+                 <?php }else{?>
                  <ul class="nav navbar-nav navbar-right">
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown"><b>Login</b> <span class="caret"></span></a>
@@ -55,7 +79,7 @@
                             </ul>   
                     </li>
                 </ul>
-
+                 <?php }?>
             </div>
         </div>
     </nav>
