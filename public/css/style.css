@@ -4,6 +4,13 @@
     font-family: 'Lato', sans-serif;
 }
 
+html,
+body {
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+
 h1,
 h2,
 h3 {
@@ -23,39 +30,120 @@ header {
 }
 
 
-/* SECTION BIENVENUE */
+/* MAIN IMAGE */
 
-#bienvenue {
-    padding: 100px;
-    background: #1c76ab;
-    text-align: center;
+.main-image {
+    background: url('../img/main-4.jpg') no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    min-height: 50%;
+    min-width: 50%;
+    position: relative;
+    display: block;
 }
 
-#bienvenue h1 {
+
+/* Footer */
+
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700,300);
+footer {
+    background-color: #4F75DF;
+    min-height: 350px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.footerleft {
+    margin-top: 50px;
+    padding: 0 36px;
+}
+
+.paddingtop-bottom {
+    margin-top: 50px;
+}
+
+.footer-ul {
+    list-style-type: none;
+    padding-left: 0px;
+    margin-left: 2px;
+}
+
+.footer-ul li {
+    line-height: 25px;
+    font-size: 14px;
+}
+
+.footer-ul li a {
+    color: #C2CCFE;
+    transition: color 0.2s linear 0s, background 0.2s linear 0s;
+}
+
+.footer-ul li a:hover {
+    transition: color 0.2s linear 0s, background 0.2s linear 0s;
+    color: #8CFACE;
+}
+
+.social:hover {
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -o-transform: scale(1.1);
+}
+
+.icon-ul {
+    list-style-type: none !important;
+    margin: 0px;
+    padding: 0px;
+}
+
+.icon-ul li {
+    line-height: 75px;
+    width: 100%;
+    float: left;
+}
+
+.icon {
+    float: left;
+    margin-right: 5px;
+}
+
+.copyright {
+    min-height: 40px;
+    background-color: #000000;
+}
+
+.copyright p {
+    text-align: left;
+    color: #FFF;
+    padding: 10px 0;
+    margin-bottom: 0px;
+}
+
+.heading7 {
+    font-size: 21px;
+    font-weight: 700;
+    color: #D5E8FE;
+    margin-bottom: 22px;
+}
+
+.post p {
+    font-size: 12px;
+    color: #FFF;
+    line-height: 20px;
+}
+
+.post p span {
+    display: block;
+    color: #BEC9FE;
+}
+
+.titlefooter {
+    font-family: 'Lobster';
+    letter-spacing: 0.8px;
+    word-spacing: 2px;
+    margin-bottom: 10px;
+    font-size: 30px;
     color: #fff;
-    text-transform: uppercase;
-}
-
-#bienvenue h3 {
-    color: #000;
-}
-
-.bouton1 {
-    font-weight: bold;
-    text-transform: uppercase;
-    color: white;
-    display: inline-block;
-    margin-top: 20px;
-    border: 1px solid white;
-    padding: 18px 50px;
-    border-radius: 3px;
-    transition: all 0.3s ease-in 0s;
-}
-
-.bouton1:hover {
-    background: #fff;
-    color: #1c76ab;
-    text-decoration: none;
 }
 
 
@@ -89,6 +177,9 @@ header {
     display: none;
 }
 
-#main-image{
+#main-image {
     background-image: ;
 }
+
+
+/* Inscription */
