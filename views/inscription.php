@@ -26,7 +26,7 @@
                 </div>
                 <div class="col-md-2"></div>
                 <div class="col-md-5 sos-form sos-form-brd">
-                    <h3>Informations personnel</h3>
+                    <h3>Informations personnelles</h3>
                     <div class="form-grp">
                         <label for="prenom">Prénom</label>
                         <input type="text" name="prenom" id="prenom" placeholder="Votre prénom">
