@@ -1,46 +1,41 @@
-<div id="bjn-carousel" class="carousel slide" data-ride="carousel">
-    <!-- Bulles -->
-    <ol class="carousel-indicators">
-        <li data-target="#bjn-carousel" data-slide-to="0" class="active"></li>
-        <li data-target="#bjn-carousel" data-slide-to="1"></li>
-        <li data-target="#bjn-carousel" data-slide-to="2"></li>
-    </ol>
-    <!-- Slides -->
-    <div class="carousel-inner">
-        <!-- Page 1 -->
-        <div class="item active">
-            <div class="carousel-page">
-                <img src="<?php echo $path['img']; ?>slider1.jpg" class="img-responsive" style="margin:0px auto;" />
+<section id="home">
+    <div id="head">
+        <img src="<?php echo $path['img'].'main-3.jpg'; ?>" class="img-responsive" id="main-image" alt="">
+    </div>
+    <div class="container-fluid">
+        <div class="container"> 
+            <div class="row">
+                <div class="col-md-4 col-xs-12 center">
+                    <img src="<?php echo $path['img'].'sectionaccueil1.jpg'; ?>" alt="">
+                </div>
+                <div class="col-md-8 col-xs-12">
+                    <h2 class="center">SOS Partner</h2>
+                    <p>Vous êtes sportif régulier, du dimanche ou expérimenté? Alors bienvenue dans SOS Partner, le site de rencontre sportif en France. Découvrez des membres qui pratiquent le même sport que vous: des boxeurs, des athlètes, des lutteurs, des danseuses étoiles, des passionnés de randos, des skieurs, des nageurs... Envoyez leur des balles pour attirer leur attention et discutez avec eux. Il va y avoir du sport... et plus si affinités.</p>
+                </div>
             </div>
-            <div class="carousel-caption">Trouvez votre bonheur dans le sport</div>
-        </div>
-        <!-- Page 2 -->
-        <div class="item">
-            <div class="carousel-page">
-                <img src="<?php echo $path['img']; ?>slider2.jpg" class="img-responsive" style="margin:0px auto;"  />
-            </div>
-        <div class="carousel-caption">Dépassez vos limites</div>
-        </div>
-        <!-- Page 3 -->
-        <div class="item">
-            <div class="carousel-page">
-                <img src="<?php echo $path['img']; ?>slider3.jpg" class="img-responsive img-rounded" style="margin:0px auto;"  />
-            </div>
-            <div class="carousel-caption">Trouvez votre partenaire de sport</div>
         </div>
     </div>
-    <!-- Contrôles -->
-    <a class="left carousel-control" href="#bjn-carousel" data-slide="prev">
-        <span class="glyphicon glyphicon-chevron-left"></span>
-    </a>
-    <a class="right carousel-control" href="#bjn-carousel" data-slide="next">
-        <span class="glyphicon glyphicon-chevron-right"></span>
-    </a>
-</div>
-<section id="bienvenue" class="container-fluid">
-    <div class="heading">
-        <h1>Bienvenue sur SOS Partner!</h1>
-        <h3>Le site où vous trouverez votre partenaire</h3>
-        <a href="inscription.php" class="bouton1">Inscrivez-vous</a>
+    <div class="container-fluid bluebackground">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h2 class="center">Comment fonctionne SOS Partner?</h2>
+                </div>
+            </div>
+            <div class="row center" style="margin-top: 20px;">
+                <div class="col-md-4">
+                    <h2>Configurez</h2>
+                    <p>Renseignez les sports pour lesquels vous souhaitez apparaître dans la recherche parmis nos 13 sports disponibles.</p>
+                </div>
+                <div class="col-md-4">
+                    <h2>Recherchez</h2>
+                    <p>Choisissez le sport, la distance autour de vous ou de la ville sélectionnée, le sexe et le niveau du partenaire que vous recherchez.</p>
+                </div>
+                <div class="col-md-4">
+                    <h2>Discutez</h2>
+                    <p>Grâce à une messagerie instantannée, échangez avec vos nouveaux contacts sportifs pour organiser votre rencontre sportive.</p>
+                </div>
+            </div>
+        </div>
     </div>
 </section>

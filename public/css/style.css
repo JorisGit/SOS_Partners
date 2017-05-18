@@ -1,24 +1,253 @@
-/* Carousel */
+/* GENERAL */
 
-.carousel-page {
+* {
+    font-family: 'Lato', sans-serif;
+}
+
+html,
+body {
+    position: relative;
+    height: 100%;
     width: 100%;
-    height: 450px;
-    background-color: #5f666d;
+}
+
+h1,
+h2,
+h3 {
+    font-weight: bold;
+}
+
+#home h2,
+#inscription h2 {
+    font-family: 'Lobster';
+}
+
+.center {
+    text-align: center;
+}
+
+.bluebackground {
+    background-color: #DAFBFE;
+}
+
+.spacerow {
+    margin-top: 40px;
+}
+
+header {
+    height: 50px;
+}
+
+.rowspace {
+    margin-top: 40px;
+}
+
+
+/* SOS form */
+
+.sos-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.sos-form h3 {
+    position: relative;
+    bottom: 25px;
+    font-family: 'Lobster';
+    text-align: center;
+    width: 100%;
+}
+
+.sos-form input[type="text"],
+.sos-form input[type="password"],
+.sos-form input[type="email"],
+.sos-form select {
+    border-left: 5px solid #3441FF;
+    border-top: 1px solid #6E6E6F;
+    border-bottom: 1px solid #6E6E6F;
+    border-right: 1px solid #6E6E6F;
+    border-radius: 0px 8px 8px 0px;
+    box-shadow: 3px;
+    padding: 12px;
+    font-size: 16px;
+}
+
+.sos-form select {
+    padding-right: 10px;
+}
+
+.sos-form input[type="text"].datenaissance {
+    padding: 12px;
+}
+
+.form-grp {
+    display: flex;
+    flex-direction: column;
+    margin: 10px 0px;
+}
+
+.form-grp label {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.sos-form-brd {
+    background-color: #E4E9F9;
+    border: 1px double black;
+    border-radius: 4px;
+    -moz-box-shadow: inset 0 0 8px #6E6E6F;
+    -webkit-box-shadow: inset 0 0 8px #6E6E6F;
+    box-shadow: inset 0 0 8px #6E6E6F;
+    padding: 50px;
+}
+
+.sos-form .datenaissance input[type="text"] {
+    border-left: 1px solid #6E6E6F;
+    border-radius: 4px;
+}
+
+.sos-form .datenaissance input[type="text"].jourmois {
+    width: 25%;
+    margin-right: 7px;
+}
+
+.sos-form .datenaissance input[type="text"].annee {
+    width: 43.63%;
+}
+
+
+/* MAIN IMAGE */
+
+.main-image {
+    background: url('../img/main-4.jpg') no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    min-height: 50%;
+    min-width: 50%;
+    position: relative;
+    display: block;
+}
+
+
+/* Footer */
+
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700,300);
+footer {
+    background-color: #4F75DF;
+    min-height: 350px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.footerleft {
+    margin-top: 50px;
+    padding: 0 36px;
+}
+
+.paddingtop-bottom {
+    margin-top: 50px;
+}
+
+.footer-ul {
+    list-style-type: none;
+    padding-left: 0px;
+    margin-left: 2px;
+}
+
+.footer-ul li {
+    line-height: 25px;
+    font-size: 14px;
+}
+
+.footer-ul li a {
+    color: #C2CCFE;
+    transition: color 0.2s linear 0s, background 0.2s linear 0s;
+}
+
+.footer-ul li a:hover {
+    transition: color 0.2s linear 0s, background 0.2s linear 0s;
+    text-decoration: none;
+    color: #8CFACE;
+}
+
+.social:hover {
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -o-transform: scale(1.1);
+}
+
+.icon-ul {
+    list-style-type: none !important;
+    margin: 0px;
+    padding: 0px;
+}
+
+.icon-ul li {
+    line-height: 75px;
+    width: 100%;
+    float: left;
+}
+
+.icon {
+    float: left;
+    margin-right: 5px;
+}
+
+.copyright {
+    min-height: 40px;
+    background-color: #333;
+}
+
+.copyright p {
+    text-align: left;
+    color: #FFF;
+    padding: 10px 0;
+    margin-bottom: 0px;
+}
+
+.heading7 {
+    font-size: 21px;
+    font-weight: 700;
+    color: #D5E8FE;
+    margin-bottom: 22px;
+}
+
+.post p {
+    font-size: 12px;
+    color: #FFF;
+    line-height: 20px;
+}
+
+.post p span {
+    display: block;
+    color: #BEC9FE;
+}
+
+.titlefooter {
+    font-family: 'Lobster';
+    letter-spacing: 0.8px;
+    word-spacing: 2px;
+    margin-bottom: 10px;
+    font-size: 30px;
     color: #fff;
+}
+
+
+/* Accueil */
+
+#home p {
+    font-size: 17px;
+}
+
+#home .row {
+    margin: 60px 0px;
 }
 
 
 /* Inscription */
 
-#inscription>.form:before {
-    top: 10px;
-    left: 8px;
-    width: 50%;
-    height: 130px;
-    box-shadow: -7px 0 10px #555;
-    transform: rotate(-5deg);
-}
-
-#inscription>.form:after {
-    display: none;
+#inscription {
+    margin-top: 5%;
+    margin-bottom: 5%;
 }
