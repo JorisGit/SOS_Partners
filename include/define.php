@@ -21,7 +21,8 @@ $page = array(
 $link = array(
     'accueil' => 'http://127.0.0.1/SOS_partners/',
     'inscription' => 'inscription',
-    'annonces' => 'annonces'
+    'annonces' => 'annonces',
+    'deconnexion' => $path['controllers'].'deconnexion.php'
     );
 
 $title = 'SOS Partner - ';

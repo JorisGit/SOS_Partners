@@ -22,7 +22,7 @@
                                 <li>
                                     <div class="row">
                                         <div class="avatarHeader">
-                                            <img src="<?php echo $path['img'].'avatars/'.$_SESSION['avatar'];?>" class="avatar img-circle img-thumbnail" alt="avatar" style="width:50%;">
+                                            <img src="<?php echo $path['img'].'avatars/'.$_SESSION['avatar'];?>" class="avatar img-circle img-thumbnail" alt="avatar" style="width:35%;margin-left:34%;">
                                         </div>
                                         <div class="bottom text-center">
                                             <span class="glyphicon glyphicon-user" aria-hidden="true"> </span>
@@ -83,5 +83,4 @@
             </div>
         </div>
     </nav>
-    
 </header>
