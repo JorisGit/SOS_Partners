@@ -18,8 +18,8 @@
                             <h4 class="heading7 titlefooter">Ils ont témoigné...</h4>
                             <div class="post">
                                 <p>Un super site pour faire de nouvelles rencontres !<span>Pierre - 3 Août 2016</span></p>
-                                <p>C'est touours mieux de faire du sport à plusieurs, je vous recommande ce site !<span>Léa - 18 Février 2017</span></p>
-                                <p>Je me suis de nouveaux amis grâce à SOS Partner !<span>Grégoire - 28 Septembre 2016</span></p>
+                                <p>C'est toujours mieux de faire du sport à plusieurs, je vous recommande ce site !<span>Léa - 18 Février 2017</span></p>
+                                <p>Je me suis fais de nouveaux amis grâce à SOS Partner !<span>Grégoire - 28 Septembre 2016</span></p>
                             </div>
                         </div>
                     </div>
