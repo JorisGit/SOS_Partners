@@ -84,7 +84,7 @@
                                     <span> </span>
                                 </label>
                                 <label for="news" class="[ btn btn-default active ]">
-                                    J'accepte la Newsletter
+                                    Newsletter
                                 </label>
                             </div>
                         </div>
@@ -98,7 +98,7 @@
                                     <span> </span>
                                 </label>
                                 <label for="cgu" class="[ btn btn-default active ]" for="cgu">
-                                    J'ai lu et j'accepte les CGU
+                                    J'accepte les CGU
                                 </label>
                             </div>
                         </div>
