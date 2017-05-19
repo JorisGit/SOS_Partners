@@ -42,12 +42,44 @@ header {
     margin-top: 40px;
 }
 
-.trait{
+.trait {
     width: 100px;
     height: 2px;
     background: #6E6E6F;
-
 }
+
+.infosupp {
+    font-size: 12px;
+    font-style: italic;
+}
+
+
+/* Checkbox */
+
+.form-group input[type="checkbox"] {
+    display: none;
+}
+
+.form-group input[type="checkbox"]+.btn-group>label span {
+    width: 20px;
+}
+
+.form-group input[type="checkbox"]+.btn-group>label span:first-child {
+    display: none;
+}
+
+.form-group input[type="checkbox"]+.btn-group>label span:last-child {
+    display: inline-block;
+}
+
+.form-group input[type="checkbox"]:checked+.btn-group>label span:first-child {
+    display: inline-block;
+}
+
+.form-group input[type="checkbox"]:checked+.btn-group>label span:last-child {
+    display: none;
+}
+
 
 /* SOS form */
 
@@ -99,12 +131,18 @@ header {
 
 .sos-form-brd {
     background-color: #E4E9F9;
-    border: 1px double black;
+    border: 1px double #010;
     border-radius: 4px;
     -moz-box-shadow: inset 0 0 8px #6E6E6F;
     -webkit-box-shadow: inset 0 0 8px #6E6E6F;
     box-shadow: inset 0 0 8px #6E6E6F;
+    margin-bottom: 50px;
     padding: 50px;
+}
+
+.datenaissance {
+    display: flex;
+    justify-content: space-between;
 }
 
 .sos-form .datenaissance input[type="text"] {
@@ -113,12 +151,11 @@ header {
 }
 
 .sos-form .datenaissance input[type="text"].jourmois {
-    width: 25%;
-    margin-right: 7px;
+    width: 22%;
 }
 
 .sos-form .datenaissance input[type="text"].annee {
-    width: 43.63%;
+    width: 50%;
 }
 
 
@@ -250,13 +287,14 @@ footer {
     margin: 60px 0px;
 }
 
-.pourquoi-sos-partner p{
+.pourquoi-sos-partner p {
     font-size: 17px;
 }
 
-.pourquoi-sos-partner h2{
+.pourquoi-sos-partner h2 {
     margin-bottom: 20px;
 }
+
 
 /* Inscription */
 
@@ -265,6 +303,7 @@ footer {
     margin-bottom: 5%;
 }
 
+
 /* PAGE 404 */
 
 .erreur-404 {
@@ -272,7 +311,7 @@ footer {
     text-align: center;
 }
 
-.erreur-404 p{
+.erreur-404 p {
     margin-bottom: 2px;
 }
 
