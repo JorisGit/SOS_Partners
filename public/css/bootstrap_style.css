@@ -82,3 +82,15 @@
 #login-dp .checkbox {
     font-size: 12px;
 }
+
+
+/* Btn */
+
+.check-grp .btn-group {
+    display: flex;
+    width: 100%;
+}
+
+.check-grp .btn-default {
+    flex-grow: 1;
+}
