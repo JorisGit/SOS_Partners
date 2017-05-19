@@ -6,19 +6,19 @@ if(!defined('ROOT_DIR')){
 define('ROOT_DIR', '');
 };
 
-function getBdd() {
+function getDb() {
 
     $dbname = "sospartner";
     $user   = "root";
     $pass   = "";
 
     try {
-        $bdd = new PDO("mysql:host=localhost;dbname=$dbname", $user, $pass);
+        $db = new PDO("mysql:host=localhost;dbname=$dbname", $user, $pass);
     } catch(PDOException $e) {
         die($e->getMessage());
     }
 
-    return $bdd;
+    return $db;
 }
 
 ?>
