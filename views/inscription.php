@@ -3,9 +3,10 @@
         <div class="row">
             <h2 class="center">Inscription</h2>
         </div>
-        <div class="row rowspace">
-            <form action="" method="post" accept-charset="UTF-8" autocomplete="off">
-                <div class="col-md-5 sos-form sos-form-brd">
+        <form action="" method="post" accept-charset="UTF-8" autocomplete="off">
+            <div class="row rowspace">
+                <div class="col-md-2"></div>
+                <div class="col-md-8 sos-form sos-form-brd">
                     <h3>Informations du compte</h3>
                     <div class="form-grp">
                         <label for="pseudo">Pseudo</label>
@@ -24,8 +25,10 @@
                         <input type="password" name="mdp2" id="mdp2" placeholder="Confirmer votre mot de passe">
                     </div>    
                 </div>
+            </div>
+            <div class="row">
                 <div class="col-md-2"></div>
-                <div class="col-md-5 sos-form sos-form-brd">
+                <div class="col-md-8 sos-form sos-form-brd">
                     <h3>Informations personnelles</h3>
                     <div class="form-grp">
                         <label for="prenom">Prénom</label>
@@ -52,7 +55,59 @@
                         </div>
                     </div>
                 </div>
-            </form>
-        </div>
+            </div>
+            <div class="row">
+                <div class="col-md-2"></div>
+                <div class="col-md-8 sos-form sos-form-brd">
+                    <h3>Géolocalisation</h3>
+                    <div class="form-grp">
+                        <label for="departement">Département</label>
+                        <input type="text" name="department" id="departement" placeholder="Renseignez votre département">
+                    </div>
+                    <div class="form-grp">
+                        <label for="ville">Ville</label>
+                        <input type="text" name="ville" id="ville" placeholder="Renseignez votre ville">
+                        <span class="infosupp">Ce champ est facultatif, utile si vous voulez cherchez des annonces dans votre ville uniquement</span>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-2"></div>
+                <div class="col-md-8 sos-form sos-form-brd">
+                    <h3>S'inscrire</h3>
+                    <div class="form-grp check-grp">
+                        <div class="[ form-group ]">
+                            <input type="checkbox" name="news" id="news" autocomplete="off" />
+                            <div class="[ btn-group ]">
+                                <label for="news" class="[ btn btn-primary ]">
+                                    <span class="[ glyphicon glyphicon-ok ]"></span>
+                                    <span> </span>
+                                </label>
+                                <label for="news" class="[ btn btn-default active ]">
+                                    J'accepte la Newsletter
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-grp check-grp">
+                        <div class="[ form-group ]">
+                            <input type="checkbox" name="cgu" id="cgu" autocomplete="off" />
+                            <div class="[ btn-group ]">
+                                <label for="cgu" class="[ btn btn-primary ]" for="cgu">
+                                    <span class="[ glyphicon glyphicon-ok ]"></span>
+                                    <span> </span>
+                                </label>
+                                <label for="cgu" class="[ btn btn-default active ]" for="cgu">
+                                    J'ai lu et j'accepte les CGU
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-grp check-grp">
+                        <input type="submit" class="btn btn-primary" name="inscription" value="Je m'inscris">
+                    </div>
+                </div>
+            </div>
+        </form>
     </div>
 </div>
