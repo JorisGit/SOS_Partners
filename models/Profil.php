@@ -2,6 +2,7 @@
 
 class Profil {
 
+    private $_id;
     private $_pseudo;
     private $_mdp;
     private $_email;
@@ -24,6 +25,19 @@ class Profil {
         $this->setDateNaissance($dateNaissance);
         $this->setDepartement($departement);
         $this->setVille($ville);
+    }
+
+    public function hydrate(array $data) {
+        foreach($data as $key => $value) {
+            $method = 'set'.ucfirst($key);
+            if(method_exists($this, $method)) {
+                $this->$method($value);
+            }
+        }
+    }
+
+    public function setId($id) {
+        $this->_id = $id;
     }
 
     public function setPseudo($pseudo) {
@@ -71,6 +85,10 @@ class Profil {
         $this->_ville = $ville;
     }
 
+    public function getId() {
+        return $this->_id;
+    }
+
     public function getPseudo() {
         return $this->_pseudo;
     }
@@ -81,6 +99,10 @@ class Profil {
 
     public function getEmail() {
         return $this->_email;
+    }
+
+    public function getNewsletter() {
+        return $this->_newsletter;
     }
 
     public function getPrenom() {
@@ -105,26 +127,6 @@ class Profil {
 
     public function getVille() {
         return $this->_ville;
-    }
-
-    public function insertProfil($pseudo) {
-        $bdd = getBdd();
-        $req = $bdd->prepare('
-        INSERT INTO profil(pseudo)
-        VALUES(:pseudo)
-        ');
-        $req->execute(array(
-            'pseudo' => $this->_pseudo/*,
-            'mdp' => $this->_mdp,
-            'email' => $this->_email,
-            'newsletter' => $this->_newsletter,
-            'prenom' => $this->_prenom,
-            'nom' => $this->_nom,
-            'sexe' => $this->_sexe,
-            'dateNaissance' => $this->_dateNaissance,
-            'departement' => $this->_departement,
-            'ville' => $this->_ville*/
-        ));
     }
 }
 
