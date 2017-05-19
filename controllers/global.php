@@ -1,6 +1,6 @@
 <?php
     if(isset($_POST['valider'])){
-    require 'models/global.php';
+    require $path['models'].'global.php';
         $email = $_POST['email'];
         $mdp = sha1($_POST['mdp']);
 
