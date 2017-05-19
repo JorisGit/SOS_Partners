@@ -11,13 +11,14 @@ function getBdd() {
     $dbname = "sospartner";
     $user   = "root";
     $pass   = "";
-    
+
     try {
-        $BDD = new PDO("mysql:host=localhost;dbname=$dbname", $user, $pass);
+        $bdd = new PDO("mysql:host=localhost;dbname=$dbname", $user, $pass);
     } catch(PDOException $e) {
         die($e->getMessage());
     }
 
+    return $bdd;
 }
 
 ?>
