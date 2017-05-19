@@ -63,6 +63,27 @@ class ProfilManager {
         $req->execute();
     }
 
+    public function pseudoExist($pseudo) {
+        $req = $this->_db->prepare('SELECT pseudo FROM profil WHERE pseudo = ?');
+        $req->execute(array($pseudo));
+        $count = $req->rowCount();
+
+        if($count >= 1)
+            return true;
+        else
+            return false;
+    }
+
+    public function emailExist($email) {
+        $req = $this->_db->prepare('SELECT email FROM profil WHERE email = ?');
+        $req->execute(array($email));
+        $count = $req->rowCount();
+
+        if($count >= 1)
+            return true;
+        else
+            return false;
+    }
 }
 
 ?>
