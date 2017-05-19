@@ -99,6 +99,7 @@ header {
 .sos-form input[type="text"],
 .sos-form input[type="password"],
 .sos-form input[type="email"],
+.sos-form input[type="number"],
 .sos-form select {
     border-left: 5px solid #3441FF;
     border-top: 1px solid #6E6E6F;
@@ -150,11 +151,11 @@ header {
     border-radius: 4px;
 }
 
-.sos-form .datenaissance input[type="text"].jourmois {
+.sos-form .datenaissance input[type="number"].jourmois {
     width: 22%;
 }
 
-.sos-form .datenaissance input[type="text"].annee {
+.sos-form .datenaissance input[type="number"].annee {
     width: 50%;
 }
 
