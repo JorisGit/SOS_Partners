@@ -57,9 +57,9 @@
                     <div class="form-grp">
                         <label for="datenaissance">Votre date de naissance</label>
                         <div class="datenaissance">
-                            <input type="text" name="jour" class="jourmois" id="datenaissance" placeholder="JJ" value="<?php if(isset($user['jour'])) echo $user['jour']; ?>" required>
-                            <input type="text" name="mois" class="jourmois" placeholder="MM" value="<?php if(isset($user['mois'])) echo $user['mois']; ?>" required>
-                            <input type="text" name="annee" class="annee" placeholder="YYYY" value="<?php if(isset($user['annee'])) echo $user['annee']; ?>" required>
+                            <input type="number" name="jour" min="1" max="31" class="jourmois" id="datenaissance" placeholder="JJ" value="<?php if(isset($user['jour'])) echo $user['jour']; ?>" required>
+                            <input type="number" name="mois" min="1" max="12" class="jourmois" placeholder="MM" value="<?php if(isset($user['mois'])) echo $user['mois']; ?>" required>
+                            <input type="number" min="<?php echo strval(intval(date('Y') - 100)); ?>" max="<?php echo strval(intval(date('Y') - 16)); ?>" name="annee" class="annee" placeholder="YYYY" value="<?php if(isset($user['annee'])) echo $user['annee']; ?>" required>
                         </div>
                     </div>
                 </div>
@@ -99,7 +99,7 @@
                     </div>
                     <div class="form-grp check-grp">
                         <div class="[ form-group ]">
-                            <input type="checkbox" name="cgu" id="cgu" autocomplete="off" required/>
+                            <input type="checkbox" name="cgu" id="cgu" autocomplete="off"/>
                             <div class="[ btn-group ]">
                                 <label for="cgu" class="[ btn btn-primary ]" for="cgu">
                                     <span class="[ glyphicon glyphicon-ok ]"></span>
