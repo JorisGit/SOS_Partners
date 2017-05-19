@@ -25,6 +25,12 @@ $link = array(
     'deconnexion' => $path['controllers'].'deconnexion.php'
     );
 
+function chargerClasse($classe) {
+        require 'models/'.$classe.'.php';
+    }
+
+spl_autoload_register('chargerClasse');
+
 $title = 'SOS Partner - ';
 
 //Titre de l'onglet
