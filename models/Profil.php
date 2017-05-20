@@ -41,11 +41,6 @@ class Profil {
     }
 
     public function setPseudo($pseudo) {
-        if(strlen($pseudo) > 12) {
-            trigger_error('Le pseudo ne doit pas dépasser 12 caractères', E_USER_WARNING);
-            return;
-        }
-
         $this->_pseudo = $pseudo;
     }
 
@@ -127,6 +122,29 @@ class Profil {
 
     public function getVille() {
         return $this->_ville;
+    }
+
+    //Vérifie si le mdp est sécurisé
+    public function mdpSecure() {
+        //Doit avoir minimum 6 caractères
+        if(strlen($this->_mdp) < 6) {
+            return false;
+        } else {
+            //Doit contenir au moins 1 chiffre et une lettre
+            if(preg_match('#(([a-zA-Z]+[0-9]+|[0-9]+[a-zA-Z]+).*|.*([a-zA-Z]+[0-9]+|[0-9]+[a-zA-Z]+).*|[a-zA-Z]+.*[0-9]+|[0-9]+.*[a-zA-Z])#', $this->_mdp)) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+    }
+
+    public function verifNomPrenom() {
+        if(!preg_match('#[[:alpha:]-\sÀÁÂÃÄÅàáâãäåÒÓÔÕÖØòóôõöøÈÉÊËèéêëÇçÌÍÎÏìíîïÙÚÛÜùúûüÿÑñ]#', $this->_prenom) || !preg_match('#[[:alpha:]-\sÀÁÂÃÄÅàáâãäåÒÓÔÕÖØòóôõöøÈÉÊËèéêëÇçÌÍÎÏìíîïÙÚÛÜùúûüÿÑñ]#', $this->_nom)) {
+            return false;
+        } else {
+            return true;
+        }
     }
 }
 
