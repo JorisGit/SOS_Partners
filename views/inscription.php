@@ -85,7 +85,7 @@
                     <h3>S'inscrire</h3>
                     <div class="form-grp check-grp">
                         <div class="[ form-group ]">
-                            <input type="checkbox" name="newsletter" id="newsletter" autocomplete="off" <?php if(isset($user['newsletter']) && $user['newsletter'] == 'on') echo 'checked'; ?>/>
+                            <input type="checkbox" name="newsletter" id="newsletter" autocomplete="off" <?php if(isset($user['newsletter']) && $user['newsletter'] == 1) echo 'checked'; ?>/>
                             <div class="[ btn-group ]">
                                 <label for="newsletter" class="[ btn btn-primary ]">
                                     <span class="[ glyphicon glyphicon-ok ]"></span>
@@ -99,7 +99,7 @@
                     </div>
                     <div class="form-grp check-grp">
                         <div class="[ form-group ]">
-                            <input type="checkbox" name="cgu" id="cgu" autocomplete="off"/>
+                            <input type="checkbox" name="cgu" id="cgu" autocomplete="off" <?php if(isset($user['cgu']) && $user['cgu'] == 1) echo 'checked'; ?>/>
                             <div class="[ btn-group ]">
                                 <label for="cgu" class="[ btn btn-primary ]" for="cgu">
                                     <span class="[ glyphicon glyphicon-ok ]"></span>
