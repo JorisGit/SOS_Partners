@@ -39,14 +39,16 @@
         </div>
     </div>
     <div class="pourquoi-sos-partner container-fluid">
-        <div class="col-lg-12 text-center">
-            <h2 class="center">Pourquoi SOS Partner?</h2>
-        </div>
-        <div class="col-lg-4 col-lg-offset-2">
-            <p>SOS Partner est le réseau social des sportifs en France, c'est un réseau social comme Facebook, Twitter mais exclusivement formé de personnes sportives, aimant le sport, recherchant des personnes ayant cette même passion ou ce même principe de vie et qui désirent faire du sport ensemble.</p>
-        </div>
-        <div class="col-lg-4">
-        <p>La différence par rapport aux sites de rencontres sportifs? C'est la possibilité de retrouver <b>avec une telle facilité</b> des sportifs qui ont votre niveau de sport, que vous êtes un joueur du dimanche ou plutôt un joueur professionel ce site est fait pour vous!</p>
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <h2 class="center">Pourquoi SOS Partner?</h2>
+            </div>
+            <div class="col-lg-4 col-lg-offset-2">
+                <p>SOS Partner est le réseau social des sportifs en France, c'est un réseau social comme Facebook, Twitter mais exclusivement formé de personnes sportives, aimant le sport, recherchant des personnes ayant cette même passion ou ce même principe de vie et qui désirent faire du sport ensemble.</p>
+            </div>
+            <div class="col-lg-4">
+            <p>La différence par rapport aux sites de rencontres sportifs? C'est la possibilité de retrouver <b>avec une telle facilité</b> des sportifs qui ont votre niveau de sport, que vous êtes un joueur du dimanche ou plutôt un joueur professionel ce site est fait pour vous!</p>
+            </div>
         </div>
     </div>
 </section>
