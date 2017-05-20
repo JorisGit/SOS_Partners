@@ -39,25 +39,34 @@
             $dateNaissance = false;
         }
 
+        $profil = new Profil($user['pseudo'], $user['mdp'], $user['email'], $user['newsletter'], $user['prenom'], $user['nom'], $user['sexe'], $dateNaissance, $user['departement'], $user['ville']);
+        $profilManager = new ProfilManager(getDb());
         if($user['cgu'] == 1) {
             if(filter_var($user['email'], FILTER_VALIDATE_EMAIL)) {
-                if($user['mdp'] == $user['mdp2']) {
-                    if($dateNaissance) {
-                        $profil = new Profil($user['pseudo'], $user['mdp'], $user['email'], $user['newsletter'], $user['prenom'], $user['nom'], $user['sexe'], $dateNaissance, $user['departement'], $user['ville']);
-                        $profilManager = new ProfilManager(getDb());
-                        if(!$profilManager->pseudoExist($user['pseudo'])) {
-                            if(!$profilManager->emailExist($user['email'])) {
-                                $profilManager->insert($profil);
+                if(strlent($user['pseudo']) <= 12) {
+                    if($profil->mdpSecure()) {
+                        if($user['mdp'] == $user['mdp2']) {
+                            if($profil->verifNomPrenom()) {
+                                if($dateNaissance) {
+                                    if(!$profilManager->pseudoExist($user['pseudo'])) {
+                                        if(!$profilManager->emailExist($user['email'])) {
+                                            $profilManager->insert($profil);
+                                        } else
+                                            $alert = "Cette adresse mail est déjà utilisé.";
+                                    } else
+                                        $alert = "Ce pseudonyme a déjà été pris.";
+                                } else
+                                    $alert = "Date de naissance invalide.";
                             } else
-                                $alert = "Cette adresse mail est déjà utilisé.";
+                                $alert = "Prénom ou nom invalide.";
                         } else
-                            $alert = "Ce pseudonyme a déjà été pris.";
+                            $alert = "Les mots de passes ne se correspondent pas.";
                     } else
-                        $alert = "Date de naissance invalide";
+                        $alert = "Le mot de passe doit avoir au minimum 6 caractères, un chiffre et une lettre.";
                 } else
-                    $alert = "Les mots de passes ne se correspondent pas.";
+                    $alert = "Veuillez saisir une adresse e-mail valide.";
             } else
-                $alert = "Veuillez saisir une adresse e-mail valide.";
+                $alert = "Le pseudo ne doit pas dépasser 12 caractères";
         } else
             $alert = "Vous ne pouvez pas vous inscrire si vous n'acceptez pas les Conditions Générales d'Utilisations.";
     }
