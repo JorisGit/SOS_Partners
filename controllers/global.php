@@ -1,15 +1,21 @@
 <?php
-    if(isset($_POST['valider'])){
+    if(isset($_POST['login'])){
     require $path['models'].'global.php';
-        $email = $_POST['email'];
-        $mdp = sha1($_POST['mdp']);
+        $identifiant = htmlspecialchars($_POST['identifiant']);
+        $mdp = htmlspecialchars(hash(hash_algos()[7], $_POST['mdpLog']));
 
-            if(isset($_POST['souvenir'])){
+            if(isset($_POST['souvenirLog'])){
                 $souvenir = true;
+            } else {
+                $souvenir = false;
             }
-        $exist = existCompte($email, $mdp, $souvenir);
-        if($exist == false){
-            $erreur = "Erreur d'email ou de mot de passe";
+
+        $connexion = new ProfilManager(getDb());
+
+        $connexion->loginCompte($identifiant, $mdp, $souvenir);
+
+        if($connexion->loginCompte($identifiant, $mdp, $souvenir) == false) {
+            $alert = "Erreur de pseudo/email ou de mot de passe";
         }
     }
     

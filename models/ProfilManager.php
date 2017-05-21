@@ -84,6 +84,31 @@ class ProfilManager {
         else
             return false;
     }
+
+    public function loginCompte($identifiant, $mdp, $souvenir) {
+        if(filter_var($identifiant, FILTER_VALIDATE_EMAIL)) {
+            $req = $this->_db->prepare('SELECT * FROM profils WHERE email = ? AND password = ?');
+        } else {
+            $req = $this->_db->prepare('SELECT * FROM profils WHERE pseudo = ? AND password = ?');
+        }
+
+        $req->execute(array($identifiant, $mdp));
+        $count = $req->rowCount();
+        $row = $req->fetch(PDO::FETCH_BOTH);
+
+        if($count == 1) {
+            $_SESSION['pseudo'] = $row['pseudo'];
+            $_SESSION['avatar'] = $row['avatar'];
+            $_SESSION['email'] = $row['email'];
+
+            if($souvenir == true)
+                include 'include/cookies.php';
+
+            return true;
+        } else {
+            return false;
+        }
+    }
 }
 
 ?>
