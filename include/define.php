@@ -15,13 +15,16 @@ $path = array(
 $page = array(
     'accueil' => 'accueil',
     'inscription' => 'inscription',
-    'annonces' => 'annonces'
+    'annonces' => 'annonces',
+    'monProfil' => 'mon-profil',
+    'error404' => 'error404'
     );
 
 $link = array(
     'accueil' => 'http://127.0.0.1/SOS_partners/',
     'inscription' => 'inscription',
     'annonces' => 'annonces',
+    'monProfil' => 'mon-profil',
     'deconnexion' => $path['controllers'].'deconnexion.php'
     );
 

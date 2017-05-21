@@ -13,19 +13,22 @@ include_once $path['controllers'].'global.php';
 //controllers
 switch($p) {
     case $page['accueil']:
-        include $path['controllers'].'accueil.php';
+        include $path['controllers'].$page['accueil'].'.php';
     break;
     case 'index':
-        include $path['controllers'].'accueil.php';
+        include $path['controllers'].$page['accueil'].'.php';
     break;
     case $page['inscription']:
-        include $path['controllers'].'inscription.php';
+        include $path['controllers'].$page['inscription'].'.php';
     break;
     case $page['annonces']:
-        include $path['controllers'].'annonces.php';
+        include $path['controllers'].$page['annonces'].'.php';
+    break;
+    case $page['monProfil']:
+        include $path['views'].$page['monProfil'].'.php';
     break;
     default:
-        include $path['controllers'].'error404.php';
+        include $path['controllers'].$page['error404'].'.php';
     break;
 }
 
@@ -35,19 +38,21 @@ switch($p) {
 //views
 switch($p) {
     case $page['accueil']:
-        include $path['views'].'accueil.php';
+        include $path['views'].$page['accueil'].'.php';
     break;
     case 'index':
-        include $path['views'].'accueil.php';
+        include $path['views'].$page['accueil'].'.php';
     break;
     case $page['inscription']:
-        include $path['views'].'inscription.php';
+        include $path['views'].$page['inscription'].'.php';
     break;
     case $page['annonces']:
-        include $path['views'].'annonces.php';
+        include $path['views'].$page['annonces'].'.php';
     break;
+    case $page['monProfil']:
+        include $path['views'].$page['monProfil'].'.php';
     default:
-        include $path['views'].'error404.php';
+        include $path['views'].$page['error404'].'.php';
     break;
 }
 
