@@ -83,6 +83,11 @@
     font-size: 12px;
 }
 
+#login-nav>.form-group .help-block {
+    position: relative;
+    top: 5px;
+}
+
 
 /* Btn */
 
