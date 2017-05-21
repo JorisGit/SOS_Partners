@@ -14,7 +14,8 @@
 }
 
 .navbar-nav li a:hover,
-.navbar-nav li.active a {
+.navbar-nav li.active a,
+.navbar-nav li a:focus {
     font-weight: bold;
     color: #1c76ab !important;
     background-color: #fff !important;
@@ -37,25 +38,14 @@
 }
 
 .navbar a.navbar-brand,
-.navbar a.navbar-brand:hover {
+.navbar a.navbar-brand:hover,
+.navbar a.navbar-brand:focus {
     text-transform: none;
     color: #fff;
     letter-spacing: 0px;
     font-size: 25px;
     font-family: 'Lobster';
-}
-
-{
-    text-transform: none;
-    color: #fff;
-    letter-spacing: 0px;
-    font-size: 25px;
-    font-family: 'Lobster';
-}
-
-.navbar-inverse .navbar-nav>li>a:hover,
-.navbar-inverse a.navbar-brand:hover {
-    color: #bae2ff;
+    border-color: transparent;
 }
 
 

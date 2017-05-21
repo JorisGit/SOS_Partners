@@ -38,7 +38,7 @@
                     </li>
                 </ul>
                  <?php } else {?>
-                 <ul class="nav navbar-nav navbar-right">
+                <ul class="nav navbar-nav navbar-right">
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown"><b>Se connecter</b> <span class="caret"></span></a>
                             <ul id="login-dp" class="dropdown-menu">
