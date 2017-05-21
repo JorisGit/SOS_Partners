@@ -24,7 +24,7 @@ $link = array(
     'accueil' => 'http://127.0.0.1/SOS_partners/',
     'inscription' => 'inscription',
     'annonces' => 'annonces',
-    'monProfil' => 'mon-profil',
+    'mon-profil' => 'mon-profil',
     'deconnexion' => $path['controllers'].'deconnexion.php'
     );
 
