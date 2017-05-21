@@ -16,7 +16,7 @@ $page = array(
     'accueil' => 'accueil',
     'inscription' => 'inscription',
     'annonces' => 'annonces',
-    'monProfil' => 'mon-profil',
+    'mon-profil' => 'mon-profil',
     'error404' => 'error404'
     );
 
