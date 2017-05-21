@@ -85,7 +85,7 @@ class Profil {
     }
 
     public function getPseudo() {
-        return $this->_pseudo;
+        return ucfirst(strtolower($this->_pseudo));
     }
 
     public function getMdp() {

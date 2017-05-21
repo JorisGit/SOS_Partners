@@ -15,12 +15,12 @@ class ProfilManager {
     public function insert(Profil $profil) {
         $req = $this->_db->prepare('INSERT INTO profil(pseudo, password, email, newsletter, prenom, nom, sexe, dateNaissance, departement, ville) VALUES(:pseudo, :mdp, :email, :newsletter, :prenom, :nom, :sexe, :dateNaissance, :departement, :ville)');
 
-        $req->bindValue(':pseudo', $profil->getPseudo());
+        $req->bindValue(':pseudo', strtolower($profil->getPseudo()));
         $req->bindValue(':mdp', $profil->getMdp());
-        $req->bindValue(':email', $profil->getEmail());
+        $req->bindValue(':email', strtolower($profil->getEmail()));
         $req->bindValue(':newsletter', $profil->getNewsletter());
-        $req->bindValue(':prenom', $profil->getPrenom());
-        $req->bindValue(':nom', $profil->getNom());
+        $req->bindValue(':prenom', strtolower($profil->getPrenom()));
+        $req->bindValue(':nom', strtolower($profil->getNom()));
         $req->bindValue(':sexe', $profil->getSexe());
         $req->bindValue(':dateNaissance', $profil->getDateNaissance());
         $req->bindValue(':departement', $profil->getDepartement());
@@ -49,12 +49,12 @@ class ProfilManager {
     public function update(Profil $profil) {
         $req = $this->_db->prepare('UPDATE profil SET pseudo = :pseudo, password = :mdp, email = :email, newsletter = :newsletter, prenom = :prenom, nom = :nom, sexe = :sexe, dateNaissance = :dateNaissance, departement = :departement, ville = :ville WHERE pseudo = :pseudo');
 
-        $req->bindValue(':pseudo', $profil->getPseudo());
+        $req->bindValue(':pseudo', strtolower($profil->getPseudo()));
         $req->bindValue(':mdp', $profil->getMdp());
-        $req->bindValue(':email', $profil->getEmail());
+        $req->bindValue(':email', strtolower($profil->getEmail()));
         $req->bindValue(':newsletter', $profil->getNewsletter());
-        $req->bindValue(':prenom', $profil->getPrenom());
-        $req->bindValue(':nom', $profil->getNom());
+        $req->bindValue(':prenom', strtolower($profil->getPrenom()));
+        $req->bindValue(':nom', strtolower($profil->getNom()));
         $req->bindValue(':sexe', $profil->getSexe());
         $req->bindValue(':dateNaissance', $profil->getDateNaissance());
         $req->bindValue(':departement', $profil->getDepartement());
@@ -87,13 +87,14 @@ class ProfilManager {
 
     public function loginCompte($identifiant, $mdp, $souvenir) {
         if(filter_var($identifiant, FILTER_VALIDATE_EMAIL)) {
-            $req = $this->_db->prepare('SELECT * FROM profils WHERE email = ? AND password = ?');
+            $req = $this->_db->prepare('SELECT * FROM profil WHERE email = ? AND password = ?');
         } else {
-            $req = $this->_db->prepare('SELECT * FROM profils WHERE pseudo = ? AND password = ?');
+            $req = $this->_db->prepare('SELECT * FROM profil WHERE pseudo = ? AND password = ?');
         }
 
-        $req->execute(array($identifiant, $mdp));
+        $req->execute(array(strtolower($identifiant), $mdp));
         $count = $req->rowCount();
+        echo $count;
         $row = $req->fetch(PDO::FETCH_BOTH);
 
         if($count == 1) {

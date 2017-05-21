@@ -1,6 +1,6 @@
 <?php
     if(isset($_POST['login'])){
-        
+
         $identifiant = htmlspecialchars($_POST['identifiant']);
         $mdp = htmlspecialchars(hash(hash_algos()[7], $_POST['mdpLog']));
 
@@ -12,10 +12,10 @@
 
         $connexion = new ProfilManager(getDb());
 
-        $connexion->loginCompte($identifiant, $mdp, $souvenir);
+        $log = $connexion->loginCompte($identifiant, $mdp, $souvenir);
 
-        if($connexion->loginCompte($identifiant, $mdp, $souvenir) == false) {
-            $alert = "Erreur de pseudo/email ou de mot de passe";
+        if($log == false) {
+            $alert = "Erreur de pseudo/email ou de mot de passe.";
         }
     }
     
