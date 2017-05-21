@@ -53,6 +53,11 @@ header {
     font-style: italic;
 }
 
+.position-icon {
+    position: relative;
+    right: 50px;
+}
+
 
 /* Checkbox */
 
