@@ -47,19 +47,19 @@
                                         <div class="col-md-12">
                                             <form class="form" role="form" method="post" action="" accept-charset="UTF-8" id="login-nav">
                                                 <div class="form-group">
-                                                    <label class="sr-only" for="emailLog">Email</label>
-                                                    <input type="email" class="form-control" id="emailLog" name="email" placeholder="Email" required>
+                                                    <label class="sr-only" for="identifiant">Email ou pseudo</label>
+                                                    <input type="text" class="form-control" id="identifiant" name="identifiant" placeholder="Email ou pseudo" required>
                                                 </div>
                                                 <div class="form-group">
                                                     <label class="sr-only" for="mdpLog">Mot de passe</label>
-                                                    <input type="password" class="form-control" id="mdpLog" name="mdp" placeholder="Mot de passe" required>
+                                                    <input type="password" class="form-control" id="mdpLog" name="mdpLog" placeholder="Mot de passe" required>
                                                     <div class="help-block center"><a href="#">Mot de passe oublié ?</a></div>
                                                 </div>
                                                 <div class="form-group">    
-                                                    <button type="submit" name="valider" class="btn btn-primary btn-block">Connexion</button>
+                                                    <button type="submit" name="login" class="btn btn-primary btn-block">Connexion</button>
                                                 </div>
                                                 <div class="checkbox center">
-                                                    <label><input type="checkbox" name="souvenir">Se souvenir de moi</label>
+                                                    <label><input type="checkbox" name="souvenirLog">Se souvenir de moi</label>
                                                 </div> 
                                             </form>
                                         </div>
