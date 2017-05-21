@@ -1,6 +1,6 @@
 <?php
     if(isset($_POST['login'])){
-    require $path['models'].'global.php';
+        
         $identifiant = htmlspecialchars($_POST['identifiant']);
         $mdp = htmlspecialchars(hash(hash_algos()[7], $_POST['mdpLog']));
 
