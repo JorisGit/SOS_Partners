@@ -70,7 +70,7 @@
 }
 
 .dropdown-toggle {
-    margin-right: 24px;
+    margin-right: 25px;
 }
 
 #login-dp .checkbox {
@@ -80,6 +80,12 @@
 #login-nav>.form-group .help-block {
     position: relative;
     top: 5px;
+}
+
+.dropdown-menu>.active>a,
+.dropdown-menu>.active>a:hover,
+.dropdown-menu>.active>a:focus {
+    background-color: #fff;
 }
 
 
@@ -92,4 +98,41 @@
 
 .check-grp .btn-default {
     flex-grow: 1;
+}
+
+
+/* Media */
+
+@media (max-width: 768px) {
+    .navbar-right {
+        margin-top: 0px;
+    }
+    .dropdown-toggle {
+        position: relative;
+        margin-right: 0px;
+        bottom: 7px;
+    }
+    #login-dp {
+        padding: 0px;
+        background-color: #fff;
+        margin-right: 0px;
+        position
+    }
+    #login-dp .bottom:hover {
+        background-color: #4F75DF;
+    }
+    #login-dp .text-center:hover a {
+        color: #fff;
+        width: 100%;
+    }
+    #login-dp .text-center a:hover {
+        text-decoration: none;
+    }
+    #login-dp .text-center b:hover {
+        color: white;
+        background-color: #4F75DF;
+    }
+    .dropdown-menu {
+        margin: 0px;
+    }
 }

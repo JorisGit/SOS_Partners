@@ -165,6 +165,19 @@ header {
 }
 
 
+/* Navbar */
+
+.avatar-header {
+    height: 100px;
+    display: flex;
+    justify-content: center;
+}
+
+.avatar-header img {
+    width: 100px;
+}
+
+
 /* MAIN IMAGE */
 
 .main-image {
