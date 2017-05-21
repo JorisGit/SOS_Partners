@@ -51,6 +51,7 @@ switch($p) {
     break;
     case $page['mon-profil']:
         include $path['views'].$page['mon-profil'].'.php';
+    break;
     default:
         include $path['views'].$page['error404'].'.php';
     break;
