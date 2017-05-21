@@ -42,7 +42,7 @@
         $profil = new Profil($user['pseudo'], $user['mdp'], $user['email'], $user['newsletter'], $user['prenom'], $user['nom'], $user['sexe'], $dateNaissance, $user['departement'], $user['ville']);
         $profilManager = new ProfilManager(getDb());
         if($user['cgu'] == 1) { 
-            if(!filter_var($pseudo, FILTER_VALIDATE_EMAIL))
+            if(!filter_var($user['pseudo'], FILTER_VALIDATE_EMAIL)) {
                 if(strlen($user['pseudo']) <= 12) {
                     if($profil->mdpSecure()) {
                         if($user['mdp'] == $user['mdp2']) {
@@ -65,7 +65,7 @@
                         $alert = "Le mot de passe doit avoir au minimum 6 caractères, un chiffre et une lettre.";
                 } else
                     $alert = "Le pseudo ne doit pas dépasser 12 caractères";
-            else
+            } else
                 $alert = "Votre pseudo ne doit pas être une adresse mail";
         } else
             $alert = "Vous ne pouvez pas vous inscrire si vous n'acceptez pas les Conditions Générales d'Utilisations.";
