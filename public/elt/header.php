@@ -25,7 +25,11 @@
                                 </div>
                                 <div class="bottom text-center">
                                     <span class="glyphicon glyphicon-user" aria-hidden="true"> </span>
-                                    <a href=""><b>Profil</b></a>
+                                    <a href="<?php echo $link['mon-profil']; ?>"><b>Mon profil</b></a>
+                                </div>
+                                <div class="bottom text-center">
+                                    <span class="glyphicon glyphicon-cog" aria-hidden="true"> </span>
+                                    <a href=""><b>Configurer mon compte</b></a>
                                 </div>
                                 <div class="bottom text-center">
                                     <span class="glyphicon glyphicon-off" aria-hidden="true"> </span>
