@@ -1,4 +1,12 @@
 <?php
+function chargerClasse($classe) {
+        require 'models/'.$classe.'.php';
+    }
+
+spl_autoload_register('chargerClasse');
+
+if(isset($_SESSION['pseudo'])) {
+}
 
 $path = array(
     'controllers' => 'controllers/',
@@ -28,12 +36,6 @@ $link = array(
     'mon-profil' => 'mon-profil',
     'deconnexion' => $path['controllers'].'deconnexion.php'
     );
-
-function chargerClasse($classe) {
-        require 'models/'.$classe.'.php';
-    }
-
-spl_autoload_register('chargerClasse');
 
 $title = 'SOS Partner - ';
 

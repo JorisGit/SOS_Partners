@@ -25,7 +25,7 @@ switch($p) {
         include $path['controllers'].$page['annonces'].'.php';
     break;
     case $page['mon-profil']:
-        include $path['views'].$page['mon-profil'].'.php';
+        include $path['controllers'].$page['mon-profil'].'.php';
     break;
     default:
         include $path['controllers'].$page['error404'].'.php';
