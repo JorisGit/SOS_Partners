@@ -259,6 +259,8 @@ footer {
 .copyright {
     min-height: 40px;
     background-color: #333;
+    position: relative;
+    top: 22px;
 }
 
 .copyright p {
@@ -326,7 +328,7 @@ footer {
 /* PAGE 404 */
 
 .erreur-404 {
-    margin: 0 auto;
+    margin: 161px auto;
     text-align: center;
 }
 
@@ -356,4 +358,10 @@ footer {
 
 .erreur-code m-t-20 {
     margin-top: 20px !important;
+}
+
+@media (max-width: 767px) {
+    .erreur-404 {
+        margin: 36px auto;
+    }
 }

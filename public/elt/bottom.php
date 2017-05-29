@@ -24,15 +24,15 @@
                         </div>
                     </div>
                 </div>
-            </footer>
-            <!--footer start from here-->
-            <div class="copyright">
-                <div class="container">
-                    <div class="col-md-12">
-                        <p>© 2016 - <?php echo date('Y'); ?> Tout droit réservé</p>
+                <!--footer start from here-->
+                <div class="copyright">
+                    <div class="container">
+                        <div class="col-md-12">
+                            <p>© 2016 - <?php echo date('Y'); ?> Tout droit réservé</p>
+                        </div>
                     </div>
                 </div>
-            </div>
+            </footer>
         <script src="<?php echo $path['js']; ?>jquery.js"></script>
         <script src="<?php echo $path['bootstrap']; ?>js/bootstrap.min.js"></script>
     </body>
