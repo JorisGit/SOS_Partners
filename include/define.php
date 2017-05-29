@@ -9,7 +9,8 @@ $path = array(
     'elt' => 'public/elt/',
     'img' => 'public/img/',
     'js' => 'public/js/',
-    'views' => 'views/'
+    'views' => 'views/',
+    'avatars' => 'public/img/avatars/'
     );
 
 $page = array(
