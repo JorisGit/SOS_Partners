@@ -298,6 +298,21 @@ footer {
 }
 
 
+/* Alert */
+
+.alert-fix {
+    position: fixed;
+    width: 100%;
+    margin-top: 50px;
+    z-index: 2;
+}
+
+.alert-fix>.alert {
+    margin: auto;
+    width: 45%;
+}
+
+
 /* Accueil */
 
 #home p {
