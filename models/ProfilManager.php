@@ -38,7 +38,7 @@ class ProfilManager {
         $req->execute(array($profil->getPseudo));
     }
 
-    //Sélection le profil dans la bdd
+    //Sélectionne le profil dans la bdd
     public function get($info) {
         if(is_int($info)) {
             $req = $this->_db->query('SELECT * FROM profil WHERE id = '.$info);
@@ -46,8 +46,10 @@ class ProfilManager {
 
             return new Profil($data);
         } else {
-            $req = $this->_db->prepare('SELECT * FROM profil WHERE pseudo = ?');
-            $req->execute(array(':pseudo' => $info));
+            $req = $this->_db->prepare('SELECT * FROM profil WHERE pseudo = :pseudo');
+            $req->bindValue(':pseudo', $info, PDO::PARAM_STR);
+
+            $req->execute();
 
             return new Profil($req->fetch(PDO::FETCH_ASSOC));
         }
