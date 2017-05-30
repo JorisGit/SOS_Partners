@@ -1,4 +1,14 @@
 <?php
+    function chargerClasse($classe) {
+        require 'models/'.$classe.'.php';
+    }
+
+    spl_autoload_register('chargerClasse');
+
+    if(isset($_SESSION['pseudo'])) {
+        
+    }
+
     if(isset($_POST['login'])){
 
         $identifiant = htmlspecialchars($_POST['identifiant']);
