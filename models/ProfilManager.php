@@ -103,7 +103,6 @@ class ProfilManager {
 
         $req->execute(array(strtolower($identifiant), $mdp));
         $count = $req->rowCount();
-        echo $count;
         $row = $req->fetch(PDO::FETCH_BOTH);
 
         if($count == 1) {

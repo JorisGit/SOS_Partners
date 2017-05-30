@@ -1,5 +1,10 @@
 <!DOCTYPE html>
 <html lang="fr">
-    <?php include 'public/elt/head.php'; ?> 
+    <?php include $path['elt'].'head.php'; ?> 
     <body>
-        <?php include 'public/elt/header.php'; ?>
+        <?php 
+            
+            include $path['elt'].'header.php';
+            include $path['elt'].'alert.php'; 
+            
+        ?>
