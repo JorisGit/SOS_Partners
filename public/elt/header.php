@@ -21,7 +21,7 @@
                         <ul id="login-dp" class="dropdown-menu">
                             <li>
                                 <div class="avatar-header">
-                                    <img src="<?php echo $path['img'].'avatars/'.$_SESSION['avatar'];?>" class="avatar img-circle img-thumbnail" alt="avatar">
+                                    <img src="<?php echo $path['avatars'].$_SESSION['avatar'];?>" class="avatar img-circle img-thumbnail" alt="avatar">
                                 </div>
                                 <div class="bottom text-center">
                                     <span class="glyphicon glyphicon-user" aria-hidden="true"> </span>
