@@ -15,9 +15,6 @@ switch($p) {
     case $page['accueil']:
         include $path['controllers'].$page['accueil'].'.php';
     break;
-    case 'index':
-        include $path['controllers'].$page['accueil'].'.php';
-    break;
     case $page['inscription']:
         if(!isset($_SESSION['pseudo']))
             include $path['controllers'].$page['inscription'].'.php';
@@ -41,9 +38,6 @@ switch($p) {
 //views
 switch($p) {
     case $page['accueil']:
-        include $path['views'].$page['accueil'].'.php';
-    break;
-    case 'index':
         include $path['views'].$page['accueil'].'.php';
     break;
     case $page['inscription']:

@@ -18,7 +18,8 @@ $page = array(
     'inscription' => 'inscription',
     'annonces' => 'annonces',
     'mon-profil' => 'mon-profil',
-    'error404' => 'error404'
+    'error404' => 'error404',
+    'accueil' => 'index'
     );
 
 $link = array(
