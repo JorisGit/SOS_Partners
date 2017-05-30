@@ -13,6 +13,7 @@ class Profil {
     private $_dateNaissance;
     private $_departement;
     private $_ville;
+    private $_avatar;
 
     public function __construct(array $data) {
         $this->hydrate($data);
@@ -71,6 +72,10 @@ class Profil {
         $this->_ville = $ville;
     }
 
+    public function setAvatar($avatar) {
+        $this->_avatar = $avatar;
+    }
+
     public function getId() {
         return $this->_id;
     }
@@ -113,6 +118,10 @@ class Profil {
 
     public function getVille() {
         return $this->_ville;
+    }
+
+    public function getAvatar() {
+        return $this->_avatar;
     }
 }
 

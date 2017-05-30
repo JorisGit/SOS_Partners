@@ -17,7 +17,7 @@
                 <?php if(isset($_SESSION['pseudo'])){?>
                 <ul class="nav navbar-nav navbar-right">
                     <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><b><?php echo $_SESSION['pseudo'] ?></b> <span class="caret"></span></a>
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><b><?php echo $myProfil->getPseudo(); ?></b> <span class="caret"></span></a>
                         <ul id="login-dp" class="dropdown-menu">
                             <li>
                                 <div class="avatar-header">
