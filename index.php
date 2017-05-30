@@ -19,7 +19,10 @@ switch($p) {
         include $path['controllers'].$page['accueil'].'.php';
     break;
     case $page['inscription']:
-        include $path['controllers'].$page['inscription'].'.php';
+        if(!isset($_SESSION['pseudo']))
+            include $path['controllers'].$page['inscription'].'.php';
+        else
+            include $path['controllers'].$page['error404'].'.php';
     break;
     case $page['annonces']:
         include $path['controllers'].$page['annonces'].'.php';
@@ -44,7 +47,10 @@ switch($p) {
         include $path['views'].$page['accueil'].'.php';
     break;
     case $page['inscription']:
-        include $path['views'].$page['inscription'].'.php';
+        if(!isset($_SESSION['pseudo']))
+            include $path['views'].$page['inscription'].'.php';
+        else
+            include $path['views'].$page['error404'].'.php';
     break;
     case $page['annonces']:
         include $path['views'].$page['annonces'].'.php';
