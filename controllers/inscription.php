@@ -14,6 +14,7 @@
             $_POST['cgu'] = 0;
         }
 
+
         $user = array(
         'pseudo' => htmlspecialchars($_POST['pseudo']),
         'mdp' => htmlspecialchars(hash(hash_algos()[7], $_POST['mdp'])),
@@ -39,14 +40,22 @@
             $dateNaissance = false;
         }
 
-        $profil = new Profil($user['pseudo'], $user['mdp'], $user['email'], $user['newsletter'], $user['prenom'], $user['nom'], $user['sexe'], $dateNaissance, $user['departement'], $user['ville']);
+        $userClass = $user;
+        $userClass['dateNaissance'] = $dateNaissance;
+        
+        unset($userClass['mdp2'], $userClass['cgu'], $userClass['jour'], $userClass['mois'], $userClass['annee']);
+
+        $profil = new Profil($userClass);
         $profilManager = new ProfilManager(getDb());
         if($user['cgu'] == 1) { 
             if(!filter_var($user['pseudo'], FILTER_VALIDATE_EMAIL)) {
+                //Vérifie si le pseudo ne dépasse pas 12 caractères
                 if(strlen($user['pseudo']) <= 12) {
-                    if($profil->mdpSecure()) {
+                    //Vérifie si le mot de passe comporte 1 lettre, 1 chiffre et a minimum 6 caractères
+                    if(preg_match('#(([a-zA-Z]+[0-9]+|[0-9]+[a-zA-Z]+).*|.*([a-zA-Z]+[0-9]+|[0-9]+[a-zA-Z]+).*|[a-zA-Z]+.*[0-9]+|[0-9]+.*[a-zA-Z])#', $user['mdp']) && strlen($user['mdp']) >= 6) {
                         if($user['mdp'] == $user['mdp2']) {
-                            if($profil->verifNomPrenom()) {
+                            //Vérifie la non présence de chiffre dans le prénom et le nom
+                            if(preg_match('#^[[:alpha:]-\sÀÁÂÃÄÅàáâãäåÒÓÔÕÖØòóôõöøÈÉÊËèéêëÇçÌÍÎÏìíîïÙÚÛÜùúûüÿÑñ]*$#', $user['prenom']) || preg_match('#^[[:alpha:]-\sÀÁÂÃÄÅàáâãäåÒÓÔÕÖØòóôõöøÈÉÊËèéêëÇçÌÍÎÏìíîïÙÚÛÜùúûüÿÑñ]*$#', $user['nom'])) {
                                 if($dateNaissance) {
                                     if(!$profilManager->pseudoExist($user['pseudo'])) {
                                         if(!$profilManager->emailExist($user['email'])) {

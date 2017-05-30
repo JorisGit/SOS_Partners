@@ -14,17 +14,8 @@ class Profil {
     private $_departement;
     private $_ville;
 
-    public function __construct($pseudo, $mdp, $email, $newsletter, $prenom, $nom, $sexe, $dateNaissance, $departement, $ville) {
-        $this->setPseudo($pseudo);
-        $this->setMdp($mdp);
-        $this->setEmail($email);
-        $this->setNewsletter($newsletter);
-        $this->setPrenom($prenom);
-        $this->setNom($nom);
-        $this->setSexe($sexe);
-        $this->setDateNaissance($dateNaissance);
-        $this->setDepartement($departement);
-        $this->setVille($ville);
+    public function __construct(array $data) {
+        $this->hydrate($data);
     }
 
     public function hydrate(array $data) {
@@ -122,29 +113,6 @@ class Profil {
 
     public function getVille() {
         return $this->_ville;
-    }
-
-    //Vérifie si le mdp est sécurisé
-    public function mdpSecure() {
-        //Doit avoir minimum 6 caractères
-        if(strlen($this->_mdp) < 6) {
-            return false;
-        } else {
-            //Doit contenir au moins 1 chiffre et une lettre
-            if(preg_match('#(([a-zA-Z]+[0-9]+|[0-9]+[a-zA-Z]+).*|.*([a-zA-Z]+[0-9]+|[0-9]+[a-zA-Z]+).*|[a-zA-Z]+.*[0-9]+|[0-9]+.*[a-zA-Z])#', $this->_mdp)) {
-                return true;
-            } else {
-                return false;
-            }
-        }
-    }
-
-    public function verifNomPrenom() {
-        if(!preg_match('#^[[:alpha:]-\sÀÁÂÃÄÅàáâãäåÒÓÔÕÖØòóôõöøÈÉÊËèéêëÇçÌÍÎÏìíîïÙÚÛÜùúûüÿÑñ]*$#', $this->_prenom) || !preg_match('#^[[:alpha:]-\sÀÁÂÃÄÅàáâãäåÒÓÔÕÖØòóôõöøÈÉÊËèéêëÇçÌÍÎÏìíîïÙÚÛÜùúûüÿÑñ]*$#', $this->_nom)) {
-            return false;
-        } else {
-            return true;
-        }
     }
 }
 

@@ -39,11 +39,18 @@ class ProfilManager {
     }
 
     //Sélection le profil dans la bdd
-    public function get($pseudo) {
-        $req = $this->_db->prepare('SELECT * FROM profil WHERE pseudo = ?');
-        $req->execute(array($pseudo));
+    public function get($info) {
+        if(is_int($info)) {
+            $req = $this->_db->query('SELECT * FROM profil WHERE id = '.$info);
+            $data = $req->fetch(PDO::FETCH_ASSOC);
 
-        return new Profil($data);
+            return new Profil($data);
+        } else {
+            $req = $this->_db->prepare('SELECT * FROM profil WHERE pseudo = ?');
+            $req->execute(array(':pseudo' => $info));
+
+            return new Profil($req->fetch(PDO::FETCH_ASSOC));
+        }
     }
 
     public function update(Profil $profil) {
