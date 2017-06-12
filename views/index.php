@@ -1,12 +1,12 @@
 <section id="home">
     <div id="head">
-        <img src="<?php echo $path['img'].'main-3.jpg'; ?>" class="img-responsive" id="main-image" alt="">
+        <img src="<?= $path['img'].'main-3.jpg'; ?>" class="img-responsive" id="main-image" alt="">
     </div>
     <div class="container-fluid">
         <div class="container"> 
             <div class="row">
                 <div class="col-md-4 col-xs-12 center">
-                    <img src="<?php echo $path['img'].'sectionaccueil1.jpg'; ?>" alt="">
+                    <img src="<?= $path['img'].'sectionaccueil1.jpg'; ?>" alt="">
                 </div>
                 <div class="col-md-8 col-xs-12">
                     <h2 class="center">SOS Partner</h2>

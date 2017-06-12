@@ -7,25 +7,25 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="<?php echo $link['accueil']; ?>">SOS Partner</a>
+                <a class="navbar-brand" href="<?= $link['accueil']; ?>">SOS Partner</a>
             </div>
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
-                    <li><a href="<?php echo $link['accueil']; ?>">Accueil</a></li>
-                    <li><a href="<?php echo $link['annonces']; ?>">Annonces</a></li>
+                    <li><a href="<?= $link['accueil']; ?>">Accueil</a></li>
+                    <li><a href="<?= $link['annonces']; ?>">Annonces</a></li>
                 </ul>
                 <?php if(isset($_SESSION['pseudo'])){?>
                 <ul class="nav navbar-nav navbar-right">
                     <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><b><?php echo $_SESSION['pseudo']; ?></b> <span class="caret"></span></a>
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><b><?= $_SESSION['pseudo']; ?></b> <span class="caret"></span></a>
                         <ul id="login-dp" class="dropdown-menu">
                             <li>
                                 <div class="avatar-header">
-                                    <img src="<?php echo $path['avatars'].$_SESSION['avatar'];?>" class="avatar img-circle img-thumbnail" alt="avatar">
+                                    <img src="<?= $path['avatars'].$_SESSION['avatar'];?>" class="avatar img-circle img-thumbnail" alt="avatar">
                                 </div>
                                 <div class="bottom text-center">
                                     <span class="glyphicon glyphicon-user" aria-hidden="true"> </span>
-                                    <a href="<?php echo $link['mon-profil']; ?>"><b>Mon profil</b></a>
+                                    <a href="<?= $link['mon-profil']; ?>"><b>Mon profil</b></a>
                                 </div>
                                 <div class="bottom text-center">
                                     <span class="glyphicon glyphicon-cog" aria-hidden="true"> </span>
@@ -33,7 +33,7 @@
                                 </div>
                                 <div class="bottom text-center">
                                     <span class="glyphicon glyphicon-off" aria-hidden="true"> </span>
-                                    <a href="<?php echo $link['deconnexion']; ?>"><b>Se deconnecter</b></a>
+                                    <a href="<?= $link['deconnexion']; ?>"><b>Se deconnecter</b></a>
                                 </div>
                             </li>
                         </ul>   
@@ -69,7 +69,7 @@
                                             if(substr_compare($_SERVER['REQUEST_URI'], $link['inscription'], strlen($link['inscription'])*-1, strlen($link['inscription']))) {
                                         ?>
                                         <div class="bottom text-center">
-                                           Pas encore inscrit ? <a href="<?php echo $page['inscription']; ?>"><b>Inscription</b></a>
+                                           Pas encore inscrit ? <a href="<?= $page['inscription']; ?>"><b>Inscription</b></a>
                                         </div>
                                         <?php
                                             }

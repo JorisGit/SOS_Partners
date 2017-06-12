@@ -6,7 +6,7 @@
                 <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
-                <span class="glyphicon glyphicon-alert position-icon"></span> <?php echo $alert; ?>
+                <span class="glyphicon glyphicon-alert position-icon"></span> <?= $alert; ?>
             </div>
         </div>
     </div>
@@ -16,7 +16,7 @@
             <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
             </button>
-            <span class="glyphicon glyphicon-alert position-icon"></span> <?php echo $alert; ?>
+            <span class="glyphicon glyphicon-alert position-icon"></span> <?= $alert; ?>
         </div>
     </div>
 <?php } ?>

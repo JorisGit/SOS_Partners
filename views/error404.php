@@ -6,7 +6,7 @@
         <p>Désolé, la page que vous essayer d'accéder est inexistante ou inacessible.</p>
         <p>Essayer de rafraîchir la page où si le problème persiste de nous contacter par email.</p>
         <div>
-            <a class="login-detail-panel-button btn" href="<?php echo $link['accueil']; ?>">
+            <a class="login-detail-panel-button btn" href="<?= $link['accueil']; ?>">
                 <i class="fa fa-arrow-left"></i>
                 Retourner sur la page d'accueil
             </a>
