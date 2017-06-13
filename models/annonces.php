@@ -1,4 +1,6 @@
+<<<<<<< HEAD
 <?php
+
 
 class Annonces {
 
@@ -72,3 +74,6 @@ class Annonces {
 
 }
 ?>
+=======
+test
+>>>>>>> 3e4e1b970607f7ad40dd066f4d0c840489790065
