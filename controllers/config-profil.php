@@ -1,18 +1,13 @@
 <?php
-$modif = array(
-    'pseudo' => htmlspecialchars($_POST['pseudo']),
+
+$tableau = array(
+
     'mdp' => htmlspecialchars(hash(hash_algos()[7], $_POST['mdp'])),
-    'mdp2' => htmlspecialchars(hash(hash_algos()[7], $_POST['mdp2'])),
+    'newmdp' => htmlspecialchars(hash(hash_algos()[7], $_POST['newmdp'])),
     'email' => htmlspecialchars($_POST['email']),
-    'prenom' => htmlspecialchars($_POST['prenom']),
-    'nom' => htmlspecialchars($_POST['nom']),
-    'sexe' => htmlspecialchars($_POST['sexe']),
-    'jour' => htmlspecialchars($_POST['jour']),
-    'mois' => htmlspecialchars($_POST['mois']),
-    'annee' => htmlspecialchars($_POST['annee']),
-    'departement' => htmlspecialchars($_POST['departement']),
-    'ville' => htmlspecialchars($_POST['ville']),
-    'newsletter' => $_POST['newsletter'],
-    'cgu' => $_POST['cgu']
+    'newemail' => htmlspecialchars($_POST['newemail']),
+    'supprimer-compte' => htmlspecialchars($_POST['supprimer-compte']),
+    'mdp-confirm' => htmlspecialchars(hash(hash_algos()[7], $_POST['mdp'])),
 );
+
 ?>
