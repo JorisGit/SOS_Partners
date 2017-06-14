@@ -22,8 +22,11 @@ $page = array(
     'accueil' => 'index'
     );
 
+    $url = $_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
+    $urlPart = explode('/', $url);
+
 $link = array(
-    'accueil' => 'index',
+    'accueil' => 'http://'.$urlPart[0].'/'.$urlPart[1],
     'inscription' => 'inscription',
     'annonces' => 'annonces',
     'mon-profil' => 'mon-profil',
