@@ -23,7 +23,7 @@ $page = array(
     );
 
 $link = array(
-    'accueil' => 'http://127.0.0.1/SOS_partners/',
+    'accueil' => 'index',
     'inscription' => 'inscription',
     'annonces' => 'annonces',
     'mon-profil' => 'mon-profil',
