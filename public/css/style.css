@@ -300,6 +300,10 @@ footer {
 
 /* Alert */
 
+.alert-pos {
+    margin-top: 50px;
+}
+
 .alert-fix {
     position: fixed;
     width: 100%;

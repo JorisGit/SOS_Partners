@@ -1,6 +1,5 @@
 <div class="container-fluid" id="inscription">
     <div class="container">
-    <?php include $path['elt'].'alert.php'; ?>
         <div class="row">
             <h2 class="center">Inscription</h2>
         </div>
