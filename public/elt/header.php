@@ -29,7 +29,7 @@
                                 </div>
                                 <div class="bottom text-center">
                                     <span class="glyphicon glyphicon-cog" aria-hidden="true"> </span>
-                                    <a href=""><b>Configurer mon compte</b></a>
+                                    <a href="config-profil"><b>Configurer mon compte</b></a>
                                 </div>
                                 <div class="bottom text-center">
                                     <span class="glyphicon glyphicon-off" aria-hidden="true"> </span>

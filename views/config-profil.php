@@ -38,7 +38,7 @@
     <div class="col-md-12">
         <h3>Supprimer votre compte</h3>
         <div class="col-md-4">
-            <input type="checkbox"> Je supprime mon compte définitivement
+            <input type="checkbox" id="supprimer-compte"> Je supprime mon compte définitivement
         </div>
     </div>
 
@@ -49,7 +49,7 @@
     <div class="form-group col-md-12">
         <label class="col-md-2 control-label" for="mdp-label">Mot de passe actuel</label>
         <div class="col-md-4">
-            <input id="mdp" name="mdp" type="password" placeholder="Votre mot de passe actuel" class="form-control input-md" required="">
+            <input id="mdp-confirm" name="mdp" type="password" placeholder="Votre mot de passe actuel" class="form-control input-md" required="">
         </div>
     </div>
 
