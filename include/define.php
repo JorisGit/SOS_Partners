@@ -19,6 +19,7 @@ $page = array(
     'annonces' => 'annonces',
     'mon-profil' => 'mon-profil',
     'error404' => 'error404',
+    'config-profil' => 'config-profil',
     'accueil' => 'index'
     );
 
@@ -30,6 +31,7 @@ $link = array(
     'inscription' => 'inscription',
     'annonces' => 'annonces',
     'mon-profil' => 'mon-profil',
+    'config-profil' => 'config-profil',
     'deconnexion' => $path['controllers'].'deconnexion.php'
     );
 
@@ -49,6 +51,9 @@ switch($p) {
     case $page['annonces']:
         $title .= 'Liste des annonces';
     break;
+    case $page['config-profil']:
+        $title .= 'Configurer mon profil';
+        break;
     default:
         $title .= 'Page introuvable';
     break;

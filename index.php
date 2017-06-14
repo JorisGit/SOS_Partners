@@ -24,6 +24,10 @@ switch($p) {
     case $page['annonces']:
         include $path['controllers'].$page['annonces'].'.php';
     break;
+    case $page['config-profil']:
+        include $path['controllers'].$page['config-profil'].'.php';
+        break;
+    default:
     case $page['mon-profil']:
         include $path['controllers'].$page['mon-profil'].'.php';
     break;
@@ -46,6 +50,9 @@ switch($p) {
         else
             include $path['views'].$page['error404'].'.php';
     break;
+    case $page['config-profil']:
+        include $path['views'].$page['config-profil'].'.php';
+        break;
     case $page['annonces']:
         include $path['views'].$page['annonces'].'.php';
     break;
