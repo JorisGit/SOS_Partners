@@ -1,7 +1,7 @@
 <?php
 
 class ProfilManager {
-    private $db;
+    private $_db;
 
     public function __construct($db) {
         $this->setDb($db);

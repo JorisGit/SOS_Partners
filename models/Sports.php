@@ -36,11 +36,11 @@ class Sports{
     }
     
     public function setIntitule($intitule) {
-        $this->_intitule = $intitule;
+        $this->_intitule = utf8_encode($intitule);
     }
     
-    public function setType($type) {
-        $this->_type = $type;
+    public function setTypeSport($type) {
+        $this->_type = utf8_encode($type);
     }
     
 }
