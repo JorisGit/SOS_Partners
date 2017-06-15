@@ -6,7 +6,7 @@
             </div>
             <div class="row">
                 <div class="col-md-12">
-                    <h3>Modifier votre mot de passe</h3>
+                    <h3><i class="fa fa-lock" aria-hidden="true"></i>Modifier votre mot de passe</h3>
                 </div>
             </div>
             <div class="row">
@@ -25,7 +25,7 @@
             </div>
             <div class="row">
                 <div class="col-md-12">
-                    <h3>Changer d'adresse mail</h3>
+                    <h3><i class="fa fa-envelope" aria-hidden="true"></i>Changer d'adresse mail</h3>
                 </div>
             </div>
             <div class="row">
@@ -44,7 +44,7 @@
             </div>
             <div class="row">
                 <div class="col-md-12">
-                    <h3>Supprimer votre compte</h3>
+                    <h3><i class="fa fa-trash" aria-hidden="true"></i>Supprimer votre compte</h3>
                 </div>
             </div>
             <div class="row">
@@ -67,7 +67,7 @@
             </div>
             <div class="row">
                 <div class="col-md-12">
-                    <h3>Confirmer le/les changement(s)</h3>
+                    <h3><i class="fa fa-thumbs-up" aria-hidden="true"></i>Confirmer le/les changement(s)</h3>
                 </div>
             </div>
             <div class="row">
@@ -75,6 +75,8 @@
                     <div class="form-group">
                         <label class="control-label" for="mdp-label">Mot de passe actuel</label>
                         <input id="mdp-confirm" name="mdp" type="password" placeholder="Votre mot de passe actuel" class="form-control input-md" required="">
+                        <span class="help-block"><i class="fa fa-lightbulb-o" aria-hidden="true"></i>
+Vous devez entrer votre mot de passe pour pouvoir effectuer les changements demandés</span>
                     </div>
                 </div>
             </div>

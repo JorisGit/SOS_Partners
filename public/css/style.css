@@ -59,6 +59,14 @@ header {
     right: 50px;
 }
 
+h3 .fa {
+    margin-right: 8px;
+}
+
+.help-block .fa {
+    margin-right: 5px;
+}
+
 
 /* Checkbox */
 
