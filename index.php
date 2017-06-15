@@ -76,10 +76,6 @@ switch($p) {
     break;
 }
 
-
-echo $page['annonces'];
-var_dump($_SESSION);
-
 //Bas de page, footer + script
     include $path['elt'].'bottom.php';
 ?>
