@@ -10,7 +10,8 @@ $path = array(
     'img' => 'public/img/',
     'js' => 'public/js/',
     'views' => 'views/',
-    'avatars' => 'public/img/avatars/'
+    'avatars' => 'public/img/avatars/',
+    'font-awesome' => 'public/css/font-awesome/'
     );
 
 $page = array(
