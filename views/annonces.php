@@ -43,7 +43,7 @@
                 </div>
                 <div class="col-md-5">
                     <div class="form-grp">
-                        <label for="calendrierAnnoncesPublie">Chercher par tranche de date les dernières annonces</label>
+                        <label for="calendrierAnnoncesPublie"><i class="fa fa-calendar" aria-hidden="true"></i>Chercher des annonces par tranche de date </label>
                         <div id="calendrierAnnoncesPublie" class="pull-right" style="background: #fff; cursor: pointer; padding: 5px 10px; border: 1px solid #ccc; width: 100%">
                             <i class="glyphicon glyphicon-calendar fa fa-calendar"></i>&nbsp;
                             <span></span> <b class="caret"></b>
@@ -53,7 +53,7 @@
                 <div class="col-md-2"></div>
                 <div class="col-md-5">
                     <div class="form-grp">
-                        <label for="calendrierActivitesPrevu">Chercher des activité par tranche de date</label>
+                        <label for="calendrierActivitesPrevu"><i class="fa fa-calendar" aria-hidden="true"></i>Chercher des activité par tranche de date</label>
                         <div id="calendrierActivitesPrevu" class="pull-right" style="background: #fff; cursor: pointer; padding: 5px 10px; border: 1px solid #ccc; width: 100%">
                             <i class="glyphicon glyphicon-calendar fa fa-calendar"></i>&nbsp;
                             <span></span> <b class="caret"></b>

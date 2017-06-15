@@ -56,7 +56,7 @@ moment.locale('fr', {
 
 $(function() {
 
-    var start = moment().subtract(29, 'days');
+    var start = moment().startOf('month');
     var end = moment();
 
     function cb(start, end) {
@@ -116,8 +116,8 @@ $(function() {
 
 $(function() {
 
-    var start = moment().subtract(29, 'days');
-    var end = moment();
+    var start = moment();
+    var end = moment().endOf('month');
 
     function cb(start, end) {
         $('#calendrierActivitesPrevu span').html('Du ' + start.format('D MMMM YYYY') + ' au ' + end.format('D MMMM YYYY'));
