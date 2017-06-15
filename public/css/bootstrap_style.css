@@ -89,6 +89,14 @@
 }
 
 
+/* Container */
+
+.container-fluid {
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+
 /* Btn */
 
 .check-grp .btn-group {
