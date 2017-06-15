@@ -13,14 +13,14 @@ class AnnoncesManager{
     }
 
     public function insert(Annonces $annonces){
-        $req = $this->_db->prepare('INSERT INTO annonces(id_profil, sport, localisation, date_publication, commentaire) VALUES (:id_profil, :sport, :localisation, :date_publication, :commentaire)');
+        $req = $this->_db->prepare('INSERT INTO annonces(titre, sport, localisation, date_publication, commentaire, id_profil) VALUES (:titre, :sport, :localisation, :date_publication, :commentaire, :id_profil)');
 
-        $req->bindValue(':id_profil', $annonces->getId_profil());
+        $req->bindValue(':titre', $annonces->getTitre());
         $req->bindValue(':sport', $annonces->getSport());
         $req->bindValue(':date_publication', $annonces->getDate_publication());
         $req->bindValue(':localisation', $annonces->getLocalisation());
         $req->bindValue(':commentaire', $annonces->getCommentaire());
-        
+        $req->bindValue(':id_profil', $annonces->getId_profil());
 
         $req->execute();
     }
@@ -43,8 +43,11 @@ class AnnoncesManager{
     }
 
     public function get($info) {
-        
-        $req = $this->_db->query('SELECT * FROM annonces WHERE id = '.$info);   
+        if(is_string($info)) {
+            $req = $this->_db->query('SELECT * FROM annonces WHERE titre = '.$info);   
+        } else {
+            $req = $this->_db->query('SELECT * FROM annonces WHERE id = '.$info);   
+        }
         return new Annonces($req->fetch(PDO::FETCH_ASSOC));
     }
 }

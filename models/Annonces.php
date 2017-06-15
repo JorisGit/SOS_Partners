@@ -4,11 +4,12 @@
 class Annonces {
 
     private $_id;
-    private $_id_profil;
-    private $_sport;
+    private $_titre;
     private $_localisation;
-    private $_date_publication;
+    private $_datePublication;
     private $_commentaire;
+    private $_idProfil;
+    private $_idSport;
 
     public function __construct(array $data){
         $this->hydrate($data);
@@ -27,48 +28,56 @@ class Annonces {
         $this->_id = $id;
     }
 
-    public function setId_profil($id_profil){
-        $this->_id_profil = $id_profil;
-    }
-
-    public function setSport($sport){
-        $this->_sport = $sport;
+    public function setTitre($titre){
+        $this->_titre = $titre;
     }
 
     public function setLocalisation($localisation){
         $this->_localisation = $localisation;
     }
 
-    public function setDate_publication($date_publication){
-        $this->_date_publication = $date_publication;
+    public function setDatePublication($datePublication){
+        $this->_datePublication = $datePublication;
     }
 
     public function setCommentaire($commentaire){
         $this->_commentaire = $commentaire;
     }
 
+    public function setIdProfil($idProfil){
+        $this->_idProfil = $idProfil;
+    }
+
+    public function setIdSport($sport){
+        $this->_sport = $idSport;
+    }
+
     public function getId(){
         return $this->_id;
     }
 
-    public function getId_profil(){
-        return $this->_id_profil;
-    }
-
-    public function getSport(){
-        return $this->_sport;
+    public function getTitre($titre){
+        $this->_titre = $titre;
     }
 
     public function getLocalisation(){
         return $this->_localisation;
     }
 
-    public function getDate_publication(){
-        return $this->_date_publication;
+    public function getDatePublication(){
+        return $this->_datePublication;
     }
 
     public function getCommentaire(){
         return $this->_commentaire;
+    }
+
+    public function getIdProfil(){
+        return $this->_idProfil;
+    }
+
+    public function getIdSport(){
+        return $this->_idSport;
     }
 
 }
