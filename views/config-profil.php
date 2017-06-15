@@ -12,14 +12,14 @@
             <div class="row">
                 <div class="col-md-6">
                     <div class="form-group">
-                        <label class="control-label" for="mdp-label">Mot de passe actuel</label>
-                        <input id="mdp" name="mdp" type="password" placeholder="Votre mot de passe actuel" class="form-control input-md" required>
+                        <label class="control-label" for="mdp-label">Nouveau mot de passe</label>
+                        <input id="newmdp" name="newmdp" type="password" placeholder="Votre nouveau mot de passe" class="form-control input-md" required>
                     </div>
                 </div>
                 <div class="col-md-6">
                     <div class="form-group">
-                        <label class="control-label" for="newmdp-label">Nouveau mot de passe</label>
-                        <input id="newmdp" name="newmdp" type="password" placeholder="Votre nouveau mot de passe" class="form-control input-md" required>
+                        <label class="control-label" for="newmdp-label">Confirmation du nouveau mot de passe</label>
+                        <input id="newmdp-confirm" name="newmdp-confirm" type="password" placeholder="Votre nouveau mot de passe" class="form-control input-md" required>
                     </div>
                 </div>
             </div>
