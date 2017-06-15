@@ -11,6 +11,15 @@
         $myProfil = $connexion->get($_SESSION['pseudo']);
         
         $pseudo = $_SESSION['pseudo'];
+
+        if($p != $page['deconnexion'])
+            $_SESSION['page'] = $p;
+
+        if($_SESSION['page'] == $page['accueil'] || $_SESSION['page'] == $page['annonces'] || $_SESSION['page'] == $page['inscription'])
+            $_SESSION['deconnexion'] = false;
+        else
+            $_SESSION['deconnexion'] = true;
+
         $pseudoClass = compact('pseudo');
 
         $profil = new Profil($pseudoClass);
