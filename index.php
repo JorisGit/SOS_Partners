@@ -8,8 +8,6 @@ include_once 'include/define.php';
 
 include_once $path['controllers'].'global.php';
 
-
-
 //controllers
 switch($p) {
     case $page['accueil']:
@@ -25,11 +23,19 @@ switch($p) {
         include $path['controllers'].$page['annonces'].'.php';
     break;
     case $page['config-profil']:
-        include $path['controllers'].$page['config-profil'].'.php';
-        break;
-    default:
+        if(isset($_SESSION['pseudo']))
+            include $path['controllers'].$page['config-profil'].'.php';
+        else
+            include $path['controllers'].$page['error404'].'.php';
+    break;
     case $page['mon-profil']:
-        include $path['controllers'].$page['mon-profil'].'.php';
+        if(isset($_SESSION['pseudo']))
+            include $path['controllers'].$page['mon-profil'].'.php';
+        else
+            include $path['controllers'].$page['error404'].'.php';
+    break;
+    case $page['deconnexion']:
+        include $path['controllers'].$page['deconnexion'].'.php';
     break;
     default:
         include $path['controllers'].$page['error404'].'.php';
@@ -50,14 +56,20 @@ switch($p) {
         else
             include $path['views'].$page['error404'].'.php';
     break;
-    case $page['config-profil']:
-        include $path['views'].$page['config-profil'].'.php';
-        break;
     case $page['annonces']:
         include $path['views'].$page['annonces'].'.php';
     break;
+    case $page['config-profil']:
+        if(isset($_SESSION['pseudo']))
+            include $path['views'].$page['config-profil'].'.php';
+        else
+            include $path['views'].$page['error404'].'.php';
+    break;
     case $page['mon-profil']:
-        include $path['views'].$page['mon-profil'].'.php';
+        if(isset($_SESSION['pseudo']))
+            include $path['views'].$page['mon-profil'].'.php';
+        else
+            include $path['views'].$page['error404'].'.php';
     break;
     default:
         include $path['views'].$page['error404'].'.php';

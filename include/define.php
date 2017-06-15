@@ -21,7 +21,8 @@ $page = array(
     'mon-profil' => 'mon-profil',
     'error404' => 'error404',
     'config-profil' => 'config-profil',
-    'accueil' => 'index'
+    'accueil' => 'index',
+    'deconnexion' => 'deconnexion'
     );
 
     $url = $_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
@@ -33,7 +34,7 @@ $link = array(
     'annonces' => 'annonces',
     'mon-profil' => 'mon-profil',
     'config-profil' => 'config-profil',
-    'deconnexion' => $path['controllers'].'deconnexion.php'
+    'deconnexion' => 'deconnexion'
     );
 
 $title = 'SOS Partner - ';
