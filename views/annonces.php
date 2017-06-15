@@ -63,7 +63,6 @@
             </form>
         </div>
         <div class="row display-annonces">
-
         </div>
     </div>
 </div>
