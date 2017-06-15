@@ -2,7 +2,7 @@
 
 
 class AnnoncesManager{
-    private $id;
+    private $_db;
 
     public function __construct($db){
         $this->setDb($db);
