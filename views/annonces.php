@@ -12,7 +12,7 @@
                 </div>
                 <div class="col-md-5">
                     <div class="form-grp">
-                        <label for="typeSport">Type de sport</label>
+                        <label for="typeSport"><i class="fa fa-futbol-o" aria-hidden="true"></i>Type de sport</label>
                         <select class="form-control" id="typeSport" value="typeSport">
                             <option value="allType">Tout les types</option>
                             <?php
@@ -28,7 +28,7 @@
                 <div class="col-md-2"></div>
                 <div class="col-md-5">
                     <div class="form-grp">
-                        <label for="sport">Sport</label>
+                        <label for="sport"><i class="fa fa-futbol-o" aria-hidden="true"></i>Sport</label>
                         <select class="form-control" id="sport" value="sport">
                             <option value="allSport">Tout les sports</option>
                             <?php
@@ -39,6 +39,15 @@
                             endforeach
                             ?>
                         </select>
+                    </div>
+                </div>
+                <div class="col-md-5">
+                    <div class="form-grp">
+                        <label for="calendrierAnnonces">Chercher les dernières annonces</label>
+                        <div id="calendrierAnnonces" class="pull-right" style="background: #fff; cursor: pointer; padding: 5px 10px; border: 1px solid #ccc; width: 100%">
+                            <i class="glyphicon glyphicon-calendar fa fa-calendar"></i>&nbsp;
+                            <span></span> <b class="caret"></b>
+                        </div>
                     </div>
                 </div>
             </form>
