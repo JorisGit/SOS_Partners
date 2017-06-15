@@ -7,8 +7,8 @@
 
     if(isset($_SESSION['pseudo'])) {
         
-        $connexion = new ProfilManager(getDb());
-        $myProfil = $connexion->get($_SESSION['pseudo']);
+        $profilManager = new ProfilManager(getDb());
+        $myProfil = $profilManager->get($_SESSION['pseudo']);
         
         $pseudo = $_SESSION['pseudo'];
 
