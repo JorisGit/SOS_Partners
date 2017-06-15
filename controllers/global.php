@@ -22,7 +22,7 @@
 
         $pseudoClass = compact('pseudo');
 
-        $profil = new Profil($pseudoClass);
+        $profilSession = new Profil($pseudoClass);
 
     }
 
