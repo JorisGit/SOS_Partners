@@ -363,6 +363,15 @@ footer {
     margin-bottom: 10px;
 }
 
+/* Mon-Profil */
+
+#mon-profil #titre_annonce {
+    width: 50%;
+}
+
+#mon-profil #commentaire_annonce {
+    height: 100px;
+}
 
 /* Inscription */
 

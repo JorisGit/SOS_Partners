@@ -115,6 +115,12 @@
     flex-grow: 1;
 }
 
+/* Mon-Profil */
+#mon-profil .col-md-4 .text-center img {
+    width: 70%;
+    height: 50%;
+    border-radius: 10%;
+}
 
 /* Media */
 
