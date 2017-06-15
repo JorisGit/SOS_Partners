@@ -13,13 +13,13 @@
                 <div class="col-md-6">
                     <div class="form-group">
                         <label class="control-label" for="mdp-label">Nouveau mot de passe</label>
-                        <input id="newmdp" name="newmdp" type="password" placeholder="Votre nouveau mot de passe" class="form-control input-md" required>
+                        <input id="newmdp" name="newmdp" type="password" placeholder="Votre nouveau mot de passe" class="form-control input-md" >
                     </div>
                 </div>
                 <div class="col-md-6">
                     <div class="form-group">
                         <label class="control-label" for="newmdp-label">Confirmation du nouveau mot de passe</label>
-                        <input id="newmdp-confirm" name="newmdp-confirm" type="password" placeholder="Votre nouveau mot de passe" class="form-control input-md" required>
+                        <input id="newmdp-confirm" name="newmdp-confirm" type="password" placeholder="Votre nouveau mot de passe" class="form-control input-md" >
                     </div>
                 </div>
             </div>
@@ -32,13 +32,13 @@
                 <div class="col-md-6">
                     <div class="form-group">
                         <label class="control-label" for="email-label">Votre adresse mail actuelle</label>
-                        <input id="email" name="email" type="email" placeholder="Votre adresse email actuelle" class="form-control input-md" required="">
+                        <input id="email" name="email" type="email" placeholder="Votre adresse email actuelle" class="form-control input-md" >
                     </div>
                 </div>
                 <div class="col-md-6">
                     <div class="form-group">
                         <label class="control-label" for="newemail-label">Votre nouvelle adresse mail</label>
-                        <input id="email" name="newemail" type="email" placeholder="Votre nouvelle adresse mail" class="form-control input-md" required="">
+                        <input id="email" name="newemail" type="email" placeholder="Votre nouvelle adresse mail" class="form-control input-md" >
                     </div>
                 </div>
             </div>
@@ -74,7 +74,7 @@
                 <div class="col-md-6">
                     <div class="form-group">
                         <label class="control-label" for="mdp-label">Mot de passe actuel</label>
-                        <input id="mdp-confirm" name="mdp" type="password" placeholder="Votre mot de passe actuel" class="form-control input-md" required="">
+                        <input id="mdp-confirm" name="mdp" type="password" placeholder="Votre mot de passe actuel" class="form-control input-md" required>
                         <span class="help-block"><i class="fa fa-lightbulb-o" aria-hidden="true"></i>
 Vous devez entrer votre mot de passe pour pouvoir effectuer les changements demandés</span>
                     </div>
