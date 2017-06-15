@@ -61,7 +61,8 @@ header {
     right: 50px;
 }
 
-h3 .fa {
+h3 .fa,
+label .fa {
     margin-right: 8px;
 }
 
