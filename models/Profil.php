@@ -36,7 +36,7 @@ class Profil {
         $this->_pseudo = $pseudo;
     }
 
-    public function setMdp($mdp) {
+    public function setPassword($mdp) {
         $this->_mdp = $mdp;
     }
 
