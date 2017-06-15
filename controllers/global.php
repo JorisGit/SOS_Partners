@@ -19,11 +19,6 @@
             $_SESSION['deconnexion'] = false;
         else
             $_SESSION['deconnexion'] = true;
-
-        $pseudoClass = compact('pseudo');
-
-        $profilSession = new Profil($pseudoClass);
-
     }
 
     if(isset($_POST['login'])){
