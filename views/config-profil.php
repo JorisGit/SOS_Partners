@@ -52,5 +52,6 @@
             <input id="mdp-confirm" name="mdp" type="password" placeholder="Votre mot de passe actuel" class="form-control input-md" required="">
         </div>
     </div>
+    <input type="submit" name="confirm" value="Confirmer">
 
 </div>
