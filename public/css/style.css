@@ -19,7 +19,9 @@ h3 {
 
 #home h2,
 #inscription h2,
-#config-profil h2 {
+#config-profil h2,
+#annonces h2,
+#annonces h3 {
     font-family: 'Lobster';
 }
 
@@ -363,6 +365,7 @@ footer {
     margin-bottom: 10px;
 }
 
+
 /* Mon-Profil */
 
 #mon-profil #titre_annonce {
@@ -373,11 +376,24 @@ footer {
     height: 100px;
 }
 
+
 /* Inscription */
 
 #inscription {
     margin-top: 5%;
     margin-bottom: 5%;
+}
+
+
+/* Annonces */
+
+#annonces .zone-filtre {
+    margin-top: 20px;
+    padding: 50px 40px;
+    border-left: 6px solid #6380C4;
+    border-right: 6px solid #6380C4;
+    border-radius: 60px;
+    background-color: #DEE5E6;
 }
 
 
