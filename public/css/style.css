@@ -18,7 +18,8 @@ h3 {
 }
 
 #home h2,
-#inscription h2 {
+#inscription h2,
+#config-profil h2 {
     font-family: 'Lobster';
 }
 
@@ -79,6 +80,8 @@ header {
 
 .form-group input[type="checkbox"]:checked+.btn-group>label span:first-child {
     display: inline-block;
+    position: relative;
+    left: 0px;
 }
 
 .form-group input[type="checkbox"]:checked+.btn-group>label span:last-child {
@@ -333,6 +336,23 @@ footer {
 
 .pourquoi-sos-partner h2 {
     margin-bottom: 20px;
+}
+
+
+/* Config profil */
+
+#config-profil h3 {
+    margin-bottom: 20px;
+}
+
+#config-profil input[type="submit"] {
+    margin-top: 40px;
+    width: 100%;
+}
+
+#config-profil label {
+    font-size: 15px;
+    margin-bottom: 10px;
 }
 
 
