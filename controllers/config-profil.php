@@ -11,6 +11,7 @@ if(isset($_POST['confirm'])) {
         'mdp-confirm' => htmlspecialchars(hash(hash_algos()[7], $_POST['mdp'])),
     );
     
+    
 }
 
 ?>
