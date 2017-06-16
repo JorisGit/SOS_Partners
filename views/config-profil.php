@@ -1,4 +1,4 @@
-<div class="container-fluid" id="config-profil"> 
+<div class="container-fluid" id="config-profil">
     <div class="container">
         <form autocomplete="off" action="" method="post">
             <div class="row">
@@ -31,14 +31,14 @@
             <div class="row">
                 <div class="col-md-6">
                     <div class="form-group">
-                        <label class="control-label" for="email-label">Votre adresse mail actuelle</label>
-                        <input id="email" name="email" type="email" placeholder="Votre adresse email actuelle" class="form-control input-md" >
+                        <label class="control-label" for="email-label">Votre nouvelle adresse mail</label>
+                        <input id="email" name="email" type="email" placeholder="Votre nouvelle adresse mail" class="form-control input-md" >
                     </div>
                 </div>
                 <div class="col-md-6">
                     <div class="form-group">
                         <label class="control-label" for="newemail-label">Votre nouvelle adresse mail</label>
-                        <input id="email" name="newemail" type="email" placeholder="Votre nouvelle adresse mail" class="form-control input-md" >
+                        <input id="newemail" name="newemail" type="email" placeholder="Votre nouvelle adresse mail (confirmation)" class="form-control input-md" >
                     </div>
                 </div>
             </div>

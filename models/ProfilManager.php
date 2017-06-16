@@ -55,20 +55,17 @@ class ProfilManager {
         }
     }
 
-    public function update(Profil $profil) {
-        $req = $this->_db->prepare('UPDATE profil SET pseudo = :pseudo, password = :mdp, email = :email, newsletter = :newsletter, prenom = :prenom, nom = :nom, sexe = :sexe, dateNaissance = :dateNaissance, departement = :departement, ville = :ville WHERE pseudo = :pseudo');
-
-        $req->bindValue(':pseudo', strtolower($profil->getPseudo()));
+    public function updateMdp(Profil $profil) {
+        $req = $this->_db->prepare('UPDATE profil SET password = :mdp WHERE pseudo = :pseudo');
         $req->bindValue(':mdp', $profil->getMdp());
-        $req->bindValue(':email', strtolower($profil->getEmail()));
-        $req->bindValue(':newsletter', $profil->getNewsletter());
-        $req->bindValue(':prenom', strtolower($profil->getPrenom()));
-        $req->bindValue(':nom', strtolower($profil->getNom()));
-        $req->bindValue(':sexe', $profil->getSexe());
-        $req->bindValue(':dateNaissance', $profil->getDateNaissance());
-        $req->bindValue(':departement', $profil->getDepartement());
-        $req->bindValue(':ville', $profil->getVille());
+        $req->bindValue(':pseudo', $profil->getPseudo());
+        $req->execute();
+    }
 
+    public function updateEmail(Profil $profil) {
+        $req = $this->_db->prepare('UPDATE profil SET email = :email WHERE pseudo = :pseudo');
+        $req->bindValue(':email', $profil->getEmail());
+        $req->bindValue(':pseudo', $profil->getPseudo());
         $req->execute();
     }
 
