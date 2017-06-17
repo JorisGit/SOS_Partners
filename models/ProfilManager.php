@@ -31,11 +31,11 @@ class ProfilManager {
 
     //Supprime le profil dans la bdd
     public function delete(Profil $profil) {
-        $this->_db->prepare('
+        $req = $this->_db->prepare('
         DELETE FROM profil WHERE pseudo = ?
         ');
 
-        $req->execute(array($profil->getPseudo));
+        $req->execute(array($profil->getPseudo()));
     }
 
     //Sélectionne le profil dans la bdd

@@ -51,13 +51,13 @@
                 <div class="col-md-6">
                     <div class="form-grp check-grp">
                         <div class="[ form-group ]">
-                            <input type="checkbox" name="supprimer-compte" id="supprimer-compte" autocomplete="off" data-toggle="modal" data-target="#myModal"/>
+                            <input type="checkbox" name="supprimercompte" id="supprimercompte" autocomplete="off" data-toggle="modal" data-target="#myModal"/>
                             <div class="[ btn-group ]">
-                                <label for="supprimer-compte" class="[ btn btn-primary ]">
+                                <label for="supprimercompte" class="[ btn btn-primary ]">
                                     <span class="[ glyphicon glyphicon-ok ]"></span>
                                     <span> </span>
                                 </label>
-                                <label for="supprimer-compte" class="[ btn btn-default active ]" >
+                                <label for="supprimercompte" class="[ btn btn-default active ]" >
                                     Je supprime mon compte définitivement
                                 </label>
                             </div>
