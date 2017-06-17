@@ -1,9 +1,5 @@
 <?php
 if(isset($_POST['confirm'])) {
-
-    if(isset($_POST['supprimer-compte'])) {
-        $configProfil['supprimer-compte'] = htmlspecialchars($_POST['supprimer-compte']);
-    }
     $configProfil = array(
         'email' => htmlspecialchars($_POST['email']),
         'newemail' => htmlspecialchars($_POST['newemail']),
@@ -16,6 +12,9 @@ if(isset($_POST['confirm'])) {
     if(!empty($_POST['nouveaumdpconfirm'])) {
         $configProfil['nouveaumdpconfirm'] = htmlspecialchars(hash(hash_algos()[7], $_POST['nouveaumdpconfirm']));
     }
+    if(isset($_POST['supprimer-compte'])) {
+        $configProfil['supprimer-compte'] = htmlspecialchars($_POST['supprimer-compte']);
+    }
     $modifProfil = new Profil($configProfil);
     $ProfilManager = new ProfilManager(getDb());
     if($configProfil['mdp-confirm'] == $myProfil->getMdp()) {
@@ -23,7 +22,7 @@ if(isset($_POST['confirm'])) {
             if($configProfil['password'] == $configProfil['nouveaumdpconfirm']) {
                $ProfilManager->updateMdp($modifProfil);
                session_destroy();
-                $alert = "Votre mot de passe a bien été changé.";
+                $alert = "Votre mot de passe a bien été changé, merci de vous reconnectez avec votre nouveau mot de passe. ";
             } else {
                 $alert = "Votre nouveau mot de passe ne correspond pas à la confirmation de votre nouveau mot de passe.";
             }

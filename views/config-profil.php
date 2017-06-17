@@ -37,7 +37,7 @@
                 </div>
                 <div class="col-md-6">
                     <div class="form-group">
-                        <label class="control-label" for="newemail-label">Votre nouvelle adresse mail</label>
+                        <label class="control-label" for="newemail-label">Confirmation de votre nouvelle adresse mail</label>
                         <input id="newemail" name="newemail" type="email" placeholder="Votre nouvelle adresse mail (confirmation)" class="form-control input-md" >
                     </div>
                 </div>
