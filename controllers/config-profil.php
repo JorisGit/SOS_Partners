@@ -18,11 +18,11 @@ if(isset($_POST['confirm'])) {
     }
     $modifProfil = new Profil($configProfil);
     $ProfilManager = new ProfilManager(getDb());
-    var_dump($configProfil);
     if($configProfil['mdp-confirm'] == $myProfil->getMdp()) {
         if(!empty($configProfil['password']) AND !empty($configProfil['nouveaumdpconfirm'])){
             if($configProfil['password'] == $configProfil['nouveaumdpconfirm']) {
                $ProfilManager->updateMdp($modifProfil);
+               session_destroy();
                 $alert = "Votre mot de passe a bien été changé.";
             } else {
                 $alert = "Votre nouveau mot de passe ne correspond pas à la confirmation de votre nouveau mot de passe.";
