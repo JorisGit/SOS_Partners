@@ -60,6 +60,26 @@
                         </div>
                     </div>
                 </div>
+                <div class="col-md-5">
+                    <div class="form-grp">
+                        <label for="ville"><i class="fa fa-map-marker" aria-hidden="true"></i>Ville</label>
+                        <input id="ville" type="text" name="ville" class="form-control">
+                        <span class="help-block"><i class="fa fa-lightbulb-o" aria-hidden="true"></i>Paramètre non pris en compte si le champ est vide</span>
+                    </div>
+                </div>
+                <div class="col-md-2"></div>
+                <div class="col-md-5">
+                    <div class="form-grp">
+                        <label for="codepostal"><i class="fa fa-map-marker" aria-hidden="true"></i>Code Postal</label>
+                        <input id="codepostal" type="text" name="codepostal" class="form-control">
+                        <span class="help-block"><i class="fa fa-lightbulb-o" aria-hidden="true"></i>Paramètre non pris en compte si le champ est vide</span>
+                    </div>
+                </div>
+                <div class="col-md-5"></div>
+                <div class="col-md-2">
+                    <button id="filtre" type="button" class="btn btn-success btn-lg btn-block">Filtrer</button>
+                </div>
+                <div class="col-md-5"></div>
             </form>
         </div>
         <div class="row display-annonces">

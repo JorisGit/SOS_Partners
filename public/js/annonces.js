@@ -35,6 +35,12 @@ $('#typeSport').change(function() {
     })
 });
 
+//Filtre
+
+$('#filtre').click(function() {
+
+});
+
 //Calendriers
 
 moment.locale('fr', {
