@@ -13,7 +13,7 @@ function getDb() {
     $pass   = "";
 
     try {
-        $db = new PDO("mysql:host=localhost;dbname=$dbname", $user, $pass);
+        $db = new PDO("mysql:host=localhost;dbname=$dbname;charset=utf8", $user, $pass);
     } catch(PDOException $e) {
         die($e->getMessage());
     }
