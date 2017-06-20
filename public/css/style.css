@@ -383,6 +383,7 @@ footer {
     height: 42px;
     background-color: #3B73E5;
 }
+
 #choix_profil p {
     overflow: hidden;
     line-height: 28px;
@@ -397,8 +398,8 @@ footer {
 }
 
 #container-profil {
-box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.7);
-padding: 25px 1px 25px 1px;
+    box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.7);
+    padding: 25px 1px 25px 1px;
 }
 
 #choix_profil .background_plus {
@@ -428,6 +429,10 @@ padding: 25px 1px 25px 1px;
     border-right: 6px solid #6380C4;
     border-radius: 60px;
     background-color: #DEE5E6;
+}
+
+#filtre {
+    margin: 50px auto;
 }
 
 
