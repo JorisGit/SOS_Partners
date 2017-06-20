@@ -67,7 +67,7 @@
                     <div class="form-grp">
                         <label for="ville">Ville</label>
                         <input type="text" name="ville" id="ville" value="<?php if(isset($user['ville'])) echo $user['ville']; ?>" placeholder="Renseignez votre ville">
-                        <span class="infosupp">Ce champ est facultatif, utile si vous voulez cherchez des annonces dans votre ville uniquement</span>
+                        <span class="help-block"><i class="fa fa-lightbulb-o" aria-hidden="true"></i>Ce champ est facultatif, utile si vous voulez cherchez des annonces dans votre ville uniquement</span>
                     </div>
                 </div>
             </div>
