@@ -12,6 +12,11 @@ if($p == $page['annonces']): ?>
 endif;
 if(file_exists($path['js'].$p.'.js')):
 ?>
+<?php
+if($p == $page['annonces']): ?>
+<script type="text/javascript" src="<?= $path['js'].'vicopo.js'; ?>"></script>
+<?php endif;
+?>
 <script type="text/javascript" src="<?= $path['js'].$p.'.js'; ?>"></script>
 <?php
 endif;

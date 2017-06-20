@@ -73,6 +73,18 @@
                         <label for="codepostal"><i class="fa fa-map-marker" aria-hidden="true"></i>Code Postal</label>
                         <input id="codepostal" type="text" name="codepostal" class="form-control">
                         <span class="help-block"><i class="fa fa-lightbulb-o" aria-hidden="true"></i>Paramètre non pris en compte si le champ est vide</span>
+                        <p>
+                            <label>
+                                Tapez le début d'un nom de ville ou d'un code postal puis appuyez sur <b>Entrée</b>.<br>
+                                <input id="ville" placeholder="Entrez un code postal ou une ville" autocomplete="off" size="50">
+                            </label>
+                        </p>
+                        <ul>
+                            <li data-vicopo="#ville">
+                                <strong data-vicopo-code-postal></strong>
+                                <span data-vicopo-ville></span>
+                            </li>
+                        </ul>
                     </div>
                 </div>
                 <div class="col-md-5"></div>
