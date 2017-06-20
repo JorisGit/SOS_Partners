@@ -17,7 +17,7 @@
 
         $user = array(
         'pseudo' => htmlspecialchars($_POST['pseudo']),
-        'mdp' => htmlspecialchars(hash(hash_algos()[7], $_POST['mdp'])),
+        'password' => htmlspecialchars(hash(hash_algos()[7], $_POST['mdp'])),
         'mdp2' => htmlspecialchars(hash(hash_algos()[7], $_POST['mdp2'])),
         'email' => htmlspecialchars($_POST['email']),
         'prenom' => htmlspecialchars($_POST['prenom']),
@@ -52,8 +52,8 @@
                 //Vérifie si le pseudo ne dépasse pas 12 caractères
                 if(strlen($user['pseudo']) <= 12) {
                     //Vérifie si le mot de passe comporte 1 lettre, 1 chiffre et a minimum 6 caractères
-                    if(preg_match('#(([a-zA-Z]+[0-9]+|[0-9]+[a-zA-Z]+).*|.*([a-zA-Z]+[0-9]+|[0-9]+[a-zA-Z]+).*|[a-zA-Z]+.*[0-9]+|[0-9]+.*[a-zA-Z])#', $user['mdp']) && strlen($user['mdp']) >= 6) {
-                        if($user['mdp'] == $user['mdp2']) {
+                    if(preg_match('#(([a-zA-Z]+[0-9]+|[0-9]+[a-zA-Z]+).*|.*([a-zA-Z]+[0-9]+|[0-9]+[a-zA-Z]+).*|[a-zA-Z]+.*[0-9]+|[0-9]+.*[a-zA-Z])#', $user['password']) && strlen($user['password']) >= 6) {
+                        if($user['password'] == $user['mdp2']) {
                             //Vérifie la non présence de chiffre dans le prénom et le nom
                             if(preg_match('#^[[:alpha:]-\sÀÁÂÃÄÅàáâãäåÒÓÔÕÖØòóôõöøÈÉÊËèéêëÇçÌÍÎÏìíîïÙÚÛÜùúûüÿÑñ]*$#', $user['prenom']) || preg_match('#^[[:alpha:]-\sÀÁÂÃÄÅàáâãäåÒÓÔÕÖØòóôõöøÈÉÊËèéêëÇçÌÍÎÏìíîïÙÚÛÜùúûüÿÑñ]*$#', $user['nom'])) {
                                 if($dateNaissance) {
