@@ -37,18 +37,22 @@ if(isset($type)) {
     FROM sport 
     INNER JOIN type_sport ts ON sport.id_typeSport = ts.id 
     WHERE ts.type = :type
-    ORDER BY sport.intitule');
+    ORDER BY intitule');
     $req->execute(array('type' => $type));
 
     }
 
 
-    while($data = $req->fetch()) {
+    $key = 0;
 
-        $produits[$data['id_sport']]['intitule'][] = ucfirst($data['intitule']);
-        $produits[$data['id_sport']]['attribut'][] = strAttr($data['intitule']);
-        $produits[$data['id_sport']]['type'][] = $data['type'];
-        
+    while($data = $req->fetch()) {
+        $produits[$key]['intitule'][] = ucfirst($data['intitule']);
+        $produits[$key]['attribut'][] = strAttr($data['intitule']);
+        if(isset($data['type']))
+            $produits[$key]['type'][] = $data['type'];
+        else
+            $produits[$key]['type'][] = 'all';
+        $key++;
     }
 
     echo json_encode($produits);

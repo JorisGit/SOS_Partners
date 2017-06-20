@@ -1,3 +1,42 @@
+//Type de Sport
+
+$('#typeSport').change(function() {
+    var typeSport = $(this).val();
+    $.ajax({
+        type: 'POST',
+        url: 'public/ajax/getSport.php',
+        data: { 'typeSport': $('#typeSport option:selected').text() },
+        dataType: 'JSON',
+        success: function(data) {
+            $('#sport').empty();
+            var all;
+            for (var key in data) {
+                if (data[key].type[0] === 'libre') {
+                    all = 'Tout les sports libres';
+                    allAttribut = 'allLibre';
+                } else if (data[key].type[0] === 'individuel') {
+                    all = 'Tout les sports individuels';
+                    allAttribut = 'allIndividuel'
+                } else if (data[key].type[0] === 'collectif') {
+                    all = 'Tout les sports collectifs';
+                    allAttribut = 'allCollectif';
+                } else {
+                    all = 'Tout les sports';
+                    allAttribut = 'allSport';
+                }
+
+                if (key == 0) {
+                    $("#sport").append('<option id="' + allAttribut + '" name="' + allAttribut + '">' + all + '</option>');
+                }
+
+                $("#sport").append('<option id="' + data[key].attribut + '" name="' + data[key].attribut + '">' + data[key].intitule + '</option>');
+            }
+        }
+    })
+});
+
+//Calendriers
+
 moment.locale('fr', {
     months: 'janvier_février_mars_avril_mai_juin_juillet_août_septembre_octobre_novembre_décembre'.split('_'),
     monthsShort: 'janv._févr._mars_avr._mai_juin_juil._août_sept._oct._nov._déc.'.split('_'),

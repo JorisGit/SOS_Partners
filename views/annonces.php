@@ -18,7 +18,7 @@
                             <?php
                             foreach($sportTypeList as $key => $type):
                             ?>
-                            <option value="<?= str_replace(' ', '-', strtolower($type->getType())); ?>"><?= ucfirst($type->getType()); ?></option>
+                            <option value="<?= strAttr($type->getType()); ?>"><?= ucfirst($type->getType()); ?></option>
                             <?php
                             endforeach
                             ?>
@@ -34,7 +34,7 @@
                             <?php
                             foreach($sportsList as $key => $sport):
                             ?>
-                            <option value="<?= str_replace(' ', '-', strtolower($sport->getIntitule())); ?>"><?= ucfirst($sport->getIntitule()); ?></option>
+                            <option value="<?= strAttr($sport->getIntitule()); ?>"><?= ucfirst($sport->getIntitule()); ?></option>
                             <?php
                             endforeach
                             ?>
