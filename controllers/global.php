@@ -50,6 +50,9 @@
         if($log == false) {
             $alert = "Pseudo/email ou mot de passe incorrect.";
         }
+
+        if($p == $page['inscription'])
+            header('Location:'.$link['annonces']);
     }
     
 ?>
