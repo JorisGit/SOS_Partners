@@ -60,6 +60,7 @@
                                     if(!$profilManager->pseudoExist($user['pseudo'])) {
                                         if(!$profilManager->emailExist($user['email'])) {
                                             $profilManager->insert($profil);
+                                            $alert = "Votre compte a bien été créer.";
                                         } else
                                             $alert = "Cette adresse email est déjà utilisé.";
                                     } else
