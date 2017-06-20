@@ -11,7 +11,8 @@ $path = array(
     'js' => 'public/js/',
     'views' => 'views/',
     'avatars' => 'public/img/avatars/',
-    'font-awesome' => 'public/css/font-awesome/'
+    'font-awesome' => 'public/css/font-awesome/',
+    'icon' => 'public/img/icon'
     );
 
 $page = array(
