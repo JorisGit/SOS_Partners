@@ -5,6 +5,7 @@ class Sports{
     private $_id;
     private $_intitule;
     private $_type;
+    private $_nombreJoueurs;
 
     public function __construct(array $data) {
         $this->hydrate($data);
@@ -30,17 +31,25 @@ class Sports{
     public function getType(){
         return $this->_type;
     }
+
+    public function getNombreJoueurs(){
+        return $this->_nombreJoueurs;
+    }
     
     public function setId($id) {
         $this->_id = $id;
     }
     
     public function setIntitule($intitule) {
-        $this->_intitule = utf8_encode($intitule);
+        $this->_intitule = $intitule;
     }
     
-    public function setTypeSport($type) {
-        $this->_type = utf8_encode($type);
+    public function setType($type) {
+        $this->_type = $type;
+    }
+    
+    public function setNombreJoueurs($nombreJoueurs) {
+        $this->_nombreJoueurs = $nombreJoueurs;
     }
     
 }

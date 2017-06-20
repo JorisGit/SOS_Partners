@@ -12,10 +12,10 @@ class SportsManager {
     }
 
     public function insert(Sports $sport)  {
-        $req = $this->_db->prepare('INSERT INTO sport(intitule, typeSport) VALUES (:intitule, :typeSport)');
+        $req = $this->_db->prepare('INSERT INTO sport(intitule, nombreJoueurs) VALUES (:intitule, :nombreJoueurs)');
 
         $req->bindValue(':titre', $sport->getIntitule());
-        $req->bindValue(':sport', $sport->getTypeSport());
+        $req->bindValue(':nombreJoueurs', $sport->getNombreJoueurs());
 
         $req->execute();
     }
@@ -27,10 +27,10 @@ class SportsManager {
     }
 
     public function update(Sports $sport){
-        $req = $this->_db->prepare('UPDATE sport SET intitule = :intitule, typeSport = :typeSport WHERE intitule = :intitule');
+        $req = $this->_db->prepare('UPDATE sport SET intitule = :intitule, nombreJoueurs = :nombreJoueurs WHERE intitule = :intitule');
 
         $req->bindValue(':titre', $sport->getIntitule());
-        $req->bindValue(':sport', $sport->getTypeSport());
+        $req->bindValue(':nombreJoueurs', $sport->getNombreJoueurs());
 
         $req->execute();
     }
@@ -59,12 +59,13 @@ class SportsManager {
     public function getType() {
         $typeSportList = [];
 
-        $req = $this->_db->query('SELECT DISTINCT typeSport FROM sport');
+        $req = $this->_db->query('SELECT type FROM type_sport');
 
         while ($data = $req->fetch(PDO::FETCH_ASSOC)) {
             $typeSportList[] = new Sports($data);
         }
         
+
         return $typeSportList;
     }
 }
