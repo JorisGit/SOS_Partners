@@ -49,6 +49,8 @@
 
         if($log == false) {
             $alert = "Pseudo/email ou mot de passe incorrect.";
+        } else {
+            header("Refresh:0");
         }
 
         if($p == $page['inscription'])
