@@ -381,7 +381,7 @@ footer {
     float: left;
     width: 20%;
     height: 42px;
-    background-color: #3B73E5;
+   
 }
 
 #choix_profil p {
@@ -393,9 +393,6 @@ footer {
     font-size: 1.1em;
 }
 
-#choix_profil :hover {
-    background-color: #83A8F3;
-}
 
 #container-profil {
     box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.7);
