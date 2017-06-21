@@ -5,9 +5,10 @@ class Annonces {
 
     private $_id;
     private $_titre;
-    private $_localisation;
+    private $_codePostal;
+    private $_nbParticipant;
     private $_datePublication;
-    private $_commentaire;
+    private $_description;
     private $_idProfil;
     private $_idSport;
 
@@ -32,16 +33,20 @@ class Annonces {
         $this->_titre = $titre;
     }
 
-    public function setLocalisation($localisation){
+    public function setCodePostal($codePostal){
         $this->_localisation = $localisation;
+    }
+
+    public function setNbParticipant($nbParticipant) {
+        $this->_nbParticipant = $nbParticipant;
     }
 
     public function setDatePublication($datePublication){
         $this->_datePublication = $datePublication;
     }
 
-    public function setCommentaire($commentaire){
-        $this->_commentaire = $commentaire;
+    public function setDescription($description){
+        $this->_description = $description;
     }
 
     public function setIdProfil($idProfil){
@@ -56,20 +61,24 @@ class Annonces {
         return $this->_id;
     }
 
-    public function getTitre($titre){
-        $this->_titre = $titre;
+    public function getTitre(){
+        return $this->_titre;
     }
 
-    public function getLocalisation(){
-        return $this->_localisation;
+    public function getCodePostal(){
+        return $this->_codePostal;
+    }
+
+    public function getNbParticipant() {
+        return $this->_nbParticipant;
     }
 
     public function getDatePublication(){
         return $this->_datePublication;
     }
 
-    public function getCommentaire(){
-        return $this->_commentaire;
+    public function getDescription(){
+        return $this->_description;
     }
 
     public function getIdProfil(){

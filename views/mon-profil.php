@@ -58,8 +58,9 @@
                                     <div class="row">
                                         <div class="col-md-12">
                                             <div class="form-group">
-                                                <label class="control-label" for="">Lieu</label>
-                                                <input id="lieu" name="lieu" type="text" placeholder="Lieu" class="form-control input-md" >
+                                                <label class="control-label" for="">Code postal</label>
+                                                <input id="code" name="code" type="text" placeholder="Code postal" class="form-control input-md" >
+                                                <div id="output"></div>
                                             </div>
                                         </div>
                                     </div>
@@ -67,13 +68,13 @@
                                         <div class="col-md-12">
                                             <div class="form-group">
                                                 <label class="control-label" for="">Description</label>
-                                                <input id="description" name="description" type="text" placeholder="Description" class="form-control input-md" >
+                                                <textarea id="description" name="description" type="text" onkeyup="adapter" placeholder="Description" class="form-control input-md"></textarea>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="modal-footer">
-                                    <button type="button" class="btn btn-primary" data-dismiss="modal">Ajouter</button>
+                                    <button type="button" name="ajouterannonce" class="btn btn-primary" data-dismiss="modal">Ajouter</button>
                                 </div>
                             </div>
                         </div>
