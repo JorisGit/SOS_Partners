@@ -25,7 +25,7 @@ $type = $_POST['typeSport'];
 
 if(isset($type)) {
 
-    $produits = array();
+    $sports = array();
 
     if($type == 'Tout les types') {
 
@@ -46,16 +46,16 @@ if(isset($type)) {
     $key = 0;
 
     while($data = $req->fetch()) {
-        $produits[$key]['intitule'][] = ucfirst($data['intitule']);
-        $produits[$key]['attribut'][] = strAttr($data['intitule']);
+        $sports[$key]['intitule'][] = ucfirst($data['intitule']);
+        $sports[$key]['attribut'][] = strAttr($data['intitule']);
         if(isset($data['type']))
-            $produits[$key]['type'][] = $data['type'];
+            $sports[$key]['type'][] = $data['type'];
         else
-            $produits[$key]['type'][] = 'all';
+            $sports[$key]['type'][] = 'all';
         $key++;
     }
 
-    echo json_encode($produits);
+    echo json_encode($sports);
 
 }
 
