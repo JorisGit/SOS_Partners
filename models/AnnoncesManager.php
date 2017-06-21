@@ -51,5 +51,17 @@ class AnnoncesManager{
         }
         return new Annonces($req->fetch(PDO::FETCH_ASSOC));
     }
+
+    public function getList() {
+        $annoncesList = [];
+
+        $req = $this->_db->query('SELECT * FROM annonce');
+
+        while ($data = $req->fetch(PDO::FETCH_ASSOC)) {
+            $annoncesList[] = new Annonces($data);
+        }
+        
+        return $annoncesList;
+    }
 }
 ?>

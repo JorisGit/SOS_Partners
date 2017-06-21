@@ -53,11 +53,11 @@ class Annonces {
         $this->_description = $description;
     }
 
-    public function setIdProfil($idProfil){
+    public function setId_Profil($idProfil){
         $this->_idProfil = $idProfil;
     }
 
-    public function setIdSport($idSport){
+    public function setId_Sport($idSport){
         $this->_idSport = $idSport;
     }
 

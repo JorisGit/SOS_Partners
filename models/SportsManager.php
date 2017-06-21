@@ -45,6 +45,9 @@ class SportsManager {
         $req->bindValue(':sport', $info);
         $req->execute();
         $donnee = $req->fetch(PDO::FETCH_ASSOC);
+
+        echo gettype($donnee);
+
         return new Sports($donnee);
     }
     

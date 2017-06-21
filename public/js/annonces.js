@@ -47,11 +47,6 @@ $('#filtre').click(function() {
         codePostal = 'empty';
     }
 
-    console.log(calendrierAnnonces);
-    console.log(calendrierEvenement);
-    console.log(codePostal);
-    console.log(sport);
-
     var sendData = 'sport->' + sport + '|' + 'date-annonces->' + calendrierAnnonces + '|' + 'date-evenement->' + calendrierEvenement + '|' + 'code-postal->' + codePostal;
 
     console.log(sendData);
@@ -62,7 +57,10 @@ $('#filtre').click(function() {
         data: { 'dataReceive': sendData },
         dataType: 'JSON',
         success: function(data) {
-            console.log(data);
+            $('#display-annonces').empty();
+            for (var key in data) {
+                $('#display-annonces').append('<div class="row"><div class="annonce"><div class="row"><div class="col-md-6"><h3>' + data[key].titre + '</h3></div><div class="col-md-6 datePublication"><span><span class="libel">Date de publication :</span> ' + data[key].dateP + '</span></div></div><div class="row description"><div class="col-md-6" ><p>' + data[key].description[0] + '</p></div><div class="col-md-6"><ul><li><span class ="libel"> Date de l\'événement :</span> ' + data[key].dateE + '</li><li><span class="libel" >Nombre de participant max: </span>' + data[key].nbParticipant + '</li><li><span class="libel" >Lieu de l\'événement : </span>' + data[key].codePostal + '</li></ul></div></div></div></div>');
+            }
         }
     });
 });

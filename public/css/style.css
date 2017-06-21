@@ -381,7 +381,6 @@ footer {
     float: left;
     width: 20%;
     height: 42px;
-   
 }
 
 #choix_profil p {
@@ -392,7 +391,6 @@ footer {
     font-weight: bold;
     font-size: 1.1em;
 }
-
 
 #container-profil {
     box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.7);
@@ -442,6 +440,38 @@ footer {
     background: white;
     display: block;
     padding: 2px;
+}
+
+#display-annonces {
+    margin-top: 50px;
+}
+
+#display-annonces .annonce {
+    margin: 25px auto;
+    padding: 25px;
+    border-top: 3px double #6380C4;
+    border-bottom: 3px double #6380C4;
+}
+
+#display-annonces .annonce h3 {
+    text-align: center;
+}
+
+.datePublication {
+    text-align: right;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.description {
+    margin-top: 30px;
+    font-size: 15px;
+}
+
+#display-annonces .annonce .libel {
+    text-decoration: underline;
+    font-weight: 600;
+    font-size: 15px;
 }
 
 

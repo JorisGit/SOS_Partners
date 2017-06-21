@@ -71,10 +71,10 @@ if(isset($dataReceive)) {
     $sport = $arrayData['sport'];
     $codePostal = $arrayData['code-postal'];
 
-    $dateFormat = ", DATE_FORMAT(datePublication, '%d/%M/%Y') AS datePubli, DATE_FORMAT(dateEvenement, '%d/%M/%Y') AS dateEvent";
+    $dateFormat = ", DATE_FORMAT(datePublication, '%d/%m/%Y') AS datePubli, DATE_FORMAT(dateEvenement, '%d/%m/%Y') AS dateEvent";
 
     if($sport == 'Tout les sports') {
-        $sql = "SELECT * ".$dateFormat." FROM annonce WHERE ";
+        $sql = "SELECT *".$dateFormat." FROM annonce WHERE ";
     } else if($sport == 'Tout les sports individuels' || $sport == 'Tout les sports collectifs' || $sport == 'Tout les sports libres') {
         $sql = 'SELECT *'.$dateFormat.' FROM annonce
         INNER JOIN sport s ON annonce.id_sport = s.id
@@ -100,14 +100,15 @@ if(isset($dataReceive)) {
         WHERE s.intitule = \''.$sport.'\' ';
     }
 
-    if($sport != 'Tout les sports' || $codePostal != 'empty') {
+    if($sport != 'Tout les sports') {
         $sql .= 'AND ';
-        if($codePostal != 'empty') {
-            $sql .= ' codePostal = \''.$codePostal.'\' AND ';
-        }
     }
 
-    $sql.= 'datePublication BETWEEN \''.$dateAnnonces.'\' AND '.$dateAnnonces2.' AND dateEvenement BETWEEN \''.$dateEvenement.'\' AND \''.$dateEvenement2.'\'';
+    if($codePostal != 'empty') {
+            $sql .= 'codePostal = \''.$codePostal.'\' AND ';
+        }
+
+    $sql.= 'datePublication BETWEEN \''.$dateAnnonces.'\' AND \''.$dateAnnonces2.'\' AND dateEvenement BETWEEN \''.$dateEvenement.'\' AND \''.$dateEvenement2.'\'';
     
 
     $req = $db->query($sql);
@@ -115,16 +116,18 @@ if(isset($dataReceive)) {
     $key = 0;
 
     while($data = $req->fetch()) {
-        $annonces[$key]['titre'] = $data['titre'];
-        $annonces[$key]['description'] = $data['description'];
-        $annonces[$key]['codePostal'] = $data['codePostal'];
-        $annonces[$key]['dateP'] = $data['datePubli'];
-        $annonces[$key]['dateE'] = $data['dateEvent'];
-        $annonces[$key]['nbParticipant'] = $data['nbParticipant'];
-        $annonces[$key]['id_sport'] = $data['id_sport'];
+        
+        $annonces[$key]['titre'][] = $data['titre'];
+        $annonces[$key]['description'][] = $data['description'];
+        $annonces[$key]['codePostal'][] = $data['codePostal'];
+        $annonces[$key]['dateP'][] = $data['datePubli'];
+        $annonces[$key]['dateE'][] = $data['dateEvent'];
+        $annonces[$key]['nbParticipant'][] = $data['nbParticipant'];
+        $annonces[$key]['id_sport'][] = $data['id_sport'];
 
         $key++;
     }
+
 
     echo json_encode($annonces);
 

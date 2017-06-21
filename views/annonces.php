@@ -83,7 +83,33 @@
                 <div class="col-md-5"></div>
             </form>
         </div>
-        <div class="row display-annonces">
+        <div id="display-annonces" class="row">
+            <?php foreach ($annoncesList as $key => $annonce): ?>
+            <div class="row">
+                <div class="annonce">
+                    <div class="row">
+                        <div class="col-md-6">   
+                            <h3><?= $annonce->getTitre(); ?></h3>
+                        </div>
+                        <div class="col-md-6 datePublication">   
+                            <span><span class="libel">Date de publication :</span> <?= $annonce->getDatePublication(); ?></span>
+                        </div>
+                    </div>
+                    <div class="row description">
+                        <div class="col-md-6">
+                            <p><?= $annonce->getDescription(); ?></p>
+                        </div>
+                        <div class="col-md-6">
+                            <ul>
+                                <li><span class="libel">Date de l'événement :</span> <?= $annonce->getDateEvenement(); ?></li>
+                                <li><span class="libel">Nombre de participant max :</span> <?= $annonce->getNbParticipant(); ?></li>
+                                <li><span class="libel">Lieu de l'événenement :</span> <?= $annonce->getCodePostal(); ?></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <?php endforeach; ?>
         </div>
     </div>
 </div>
