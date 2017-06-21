@@ -5,6 +5,7 @@ class Sports{
     private $_id;
     private $_intitule;
     private $_nombreJoueurs;
+    private $_type;
     private $_id_typeSport;
 
     public function __construct(array $data) {
@@ -35,6 +36,10 @@ class Sports{
     public function getId_typeSport(){
         return $this->_id_typeSport;
     }
+
+    public function getType() {
+        return $this->_type;
+    }
     
     public function setId($id) {
         $this->_id = $id;
@@ -50,6 +55,10 @@ class Sports{
 
     public function setId_typeSport($id_typeSport) {
         $this->_id_typeSport = $id_typeSport;
+    }
+
+    public function setType($type) {
+        $this->_type = $type;
     }
     
 }
