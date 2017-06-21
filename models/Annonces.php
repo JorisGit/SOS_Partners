@@ -8,6 +8,7 @@ class Annonces {
     private $_codePostal;
     private $_nbParticipant;
     private $_datePublication;
+    private $_dateEvenement;
     private $_description;
     private $_idProfil;
     private $_idSport;
@@ -45,15 +46,19 @@ class Annonces {
         $this->_datePublication = $datePublication;
     }
 
+    public function setDateEvenement($dateEvenement){
+        $this->_dateEvenement = $dateEvenement;
+    }
+
     public function setDescription($description){
         $this->_description = $description;
     }
 
-    public function setIdProfil($idProfil){
+    public function setId_profil($idProfil){
         $this->_idProfil = $idProfil;
     }
 
-    public function setIdSport($sport){
+    public function setId_sport($sport){
         $this->_sport = $idSport;
     }
 
@@ -71,6 +76,10 @@ class Annonces {
 
     public function getNbParticipant() {
         return $this->_nbParticipant;
+    }
+
+    public function getDateEvenement(){
+        return $this->_dateEvenement;
     }
 
     public function getDatePublication(){
