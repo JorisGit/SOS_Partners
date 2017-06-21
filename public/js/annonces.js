@@ -38,8 +38,35 @@ $('#typeSport').change(function() {
 //Filtre
 
 $('#filtre').click(function() {
+    var calendrierAnnonces = $('#calendrierAnnoncesPublie span').text();
+    var calendrierEvenement = $('#calendrierActivitesPrevu span').text();;
+    var codePostal = $('#code').val();
+    var sport = $('#sport option:selected').text();
 
+    if (codePostal.length == 0) {
+        codePostal = 'empty';
+    }
+
+    console.log(calendrierAnnonces);
+    console.log(calendrierEvenement);
+    console.log(codePostal);
+    console.log(sport);
+
+    var sendData = 'sport->' + sport + '|' + 'date-annonces->' + calendrierAnnonces + '|' + 'date-evenement->' + calendrierEvenement + '|' + 'code-postal->' + codePostal;
+
+    console.log(sendData);
+
+    $.ajax({
+        type: 'POST',
+        url: 'public/ajax/filtreAnnonces.php',
+        data: { 'dataReceive': sendData },
+        dataType: 'JSON',
+        success: function(data) {
+            console.log(data);
+        }
+    });
 });
+
 
 //Calendriers
 
