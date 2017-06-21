@@ -121,7 +121,7 @@
                                 <div class="row">
                                     <div class="span7">
                                         <h2>
-                                            <span class="label"><?php echo ucfirst($annonceListes->getTitre());?></span>
+                                            <?php echo ucfirst($annonceListes->getTitre());?>
                                         </h2>
                                     </div>
                                     <div class="span2 pull-right date"><?php echo $annonceListes->getDatePublication();?></div>
