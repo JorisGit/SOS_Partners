@@ -13,14 +13,15 @@ class AnnoncesManager{
     }
 
     public function insert(Annonces $annonces){
-        $req = $this->_db->prepare('INSERT INTO annonces(titre, sport, localisation, date_publication, commentaire, id_profil) VALUES (:titre, :sport, :localisation, :date_publication, :commentaire, :id_profil)');
+        $req = $this->_db->prepare('INSERT INTO annonce(titre, description, codePostal, datePublication, dateEvenement, nbParticipant, id_profil, id_sport) VALUES (:titre, :description, :codePostal, NOW(), :dateEvenement, :nbParticipant, :id_profil, :id_sport)');
 
         $req->bindValue(':titre', $annonces->getTitre());
-        $req->bindValue(':sport', $annonces->getSport());
-        $req->bindValue(':date_publication', $annonces->getDate_publication());
-        $req->bindValue(':localisation', $annonces->getLocalisation());
-        $req->bindValue(':commentaire', $annonces->getCommentaire());
-        $req->bindValue(':id_profil', $annonces->getId_profil());
+        $req->bindValue(':description', $annonces->getDescription());
+        $req->bindValue(':codePostal', $annonces->getCodePostal());
+        $req->bindValue(':dateEvenement', $annonces->getDateEvenement());
+        $req->bindValue(':nbParticipant', $annonces->getNbParticipant());
+        $req->bindValue(':id_profil', $annonces->getIdProfil());
+        $req->bindValue(':id_sport', $annonces->getIdSport());
 
         $req->execute();
     }
@@ -32,7 +33,7 @@ class AnnoncesManager{
     }
 
     public function update(Annonces $annonces){
-        $req = $this->_db->prepare('UPDATE annonces SET sport = :sport, localisation = :localisation, date_publication = :date_publication, commentaire = :commentaire WHERE id = :id');
+        $req = $this->_db->prepare('UPDATE annonces SET titre = :titre, description = :description, codePostal = :codePostal, datePublication = :datePublication, dateEvenement = :dateEvenement, nbParticipant = :nbParticipant, id_profil = :id_profil, id_sport = :id_sport  WHERE id = :id');
 
         $req->bindValue(':sport', strtolower($annonces->getSport()));
         $req->bindValue(':localisation', strtolower($annonces->getLocalisation()));

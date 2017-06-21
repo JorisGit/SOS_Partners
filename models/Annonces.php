@@ -1,6 +1,5 @@
 <?php
 
-
 class Annonces {
 
     private $_id;
@@ -35,7 +34,7 @@ class Annonces {
     }
 
     public function setCodePostal($codePostal){
-        $this->_localisation = $localisation;
+        $this->_codePostal = $codePostal;
     }
 
     public function setNbParticipant($nbParticipant) {
@@ -46,7 +45,7 @@ class Annonces {
         $this->_datePublication = $datePublication;
     }
 
-    public function setDateEvenement($dateEvenement){
+    public function setDateEvenement($dateEvenement) {
         $this->_dateEvenement = $dateEvenement;
     }
 
@@ -54,12 +53,12 @@ class Annonces {
         $this->_description = $description;
     }
 
-    public function setId_profil($idProfil){
+    public function setIdProfil($idProfil){
         $this->_idProfil = $idProfil;
     }
 
-    public function setId_sport($sport){
-        $this->_sport = $idSport;
+    public function setIdSport($idSport){
+        $this->_idSport = $idSport;
     }
 
     public function getId(){
@@ -78,12 +77,12 @@ class Annonces {
         return $this->_nbParticipant;
     }
 
-    public function getDateEvenement(){
-        return $this->_dateEvenement;
-    }
-
     public function getDatePublication(){
         return $this->_datePublication;
+    }
+
+    public function getDateEvenement() {
+        return $this->_dateEvenement;
     }
 
     public function getDescription(){

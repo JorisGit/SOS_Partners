@@ -37,11 +37,15 @@ class SportsManager {
 
     public function get($info) {
         if(is_string($info)) {
-            $req = $this->_db->query('SELECT * FROM sport WHERE titre = '.$info);   
+            $req = $this->_db->prepare('SELECT * FROM sport WHERE intitule = :sport');   
         } else {
-            $req = $this->_db->query('SELECT * FROM sport WHERE id = '.$info);   
+            $req = $this->_db->prepare('SELECT * FROM sport WHERE id = :sport');   
         }
-        return new Sports($req->fetch(PDO::FETCH_ASSOC));
+
+        $req->bindValue(':sport', $info);
+        $req->execute();
+        $donnee = $req->fetch(PDO::FETCH_ASSOC);
+        return new Sports($donnee);
     }
     
     public function getList() {
