@@ -1,4 +1,9 @@
 <div class="container-fluid" id="mon-profil">
+    <div class="row">
+            <div class="col-md-12">
+                <h2 class="center">Mon Profil</h2>
+            </div>
+        </div>
     <div class="col-md-12 col-sm-6">
         <div class="container" id="container-profil">
             <div class="row">
@@ -26,13 +31,13 @@
                                             <div class="col-md-7">
                                                 <div class="form-group">
                                                     <label class="control-label" for="">Titre de l'annonce</label>
-                                                    <input id="titre" name="titre" type="text" placeholder="Titre de l'annonce" class="form-control input-md" >
+                                                    <input id="titre" name="titre" type="text" placeholder="Titre de l'annonce" required="true" class="form-control input-md" >
                                                 </div>
                                             </div>
                                             <div class="col-md-5">
                                                 <div class="form-group">
                                                     <label class="control-label" for="">Nombre de participant(s)</label>
-                                                    <input id="nbParticipant" name="nbParticipant" type="number" placeholder="Nombre de participant(s)" class="form-control input-md" >
+                                                    <input id="nbParticipant" name="nbParticipant" type="number" placeholder="Nombre de participant(s)" required="true" class="form-control input-md" >
                                                 </div>
                                             </div>
                                         </div>
@@ -40,19 +45,19 @@
                                             <div class="col-md-4">
                                                 <div class="form-group">
                                                     <label class="control-label" for="">Jour</label>
-                                                    <input id="date" min="1" max="31" name="jour" type="number" placeholder="JJ" class="form-control input-md" >
+                                                    <input id="date" min="1" max="31" name="jour" type="number" placeholder="JJ" required="true" class="form-control input-md" >
                                                 </div>
                                             </div>
                                             <div class="col-md-4">
                                                 <div class="form-group">
                                                     <label class="control-label" for="">Mois</label>
-                                                    <input id="date" min="1" max="12" name="mois" type="number" placeholder="MM" class="form-control input-md" >
+                                                    <input id="date" min="1" max="12" name="mois" type="number" placeholder="MM" required="true" class="form-control input-md" >
                                                 </div>
                                             </div>
                                             <div class="col-md-4">
                                                 <div class="form-group">
                                                     <label class="control-label" for="">Annee</label>
-                                                    <input id="date" name="annee" type="number" placeholder="YYYY" class="form-control input-md" >
+                                                    <input id="date" name="annee" type="number" placeholder="YYYY" required="true" class="form-control input-md" >
                                                 </div>
                                             </div>
                                         </div>
@@ -74,7 +79,7 @@
                                             <div class="col-md-6">
                                                 <div class="form-group">
                                                     <label class="control-label" for="">Code postal</label>
-                                                    <input id="code" name="code" type="text" placeholder="Code postal" class="form-control input-md" >
+                                                    <input id="code" name="code" type="text" placeholder="Code postal" required="true" class="form-control input-md" >
                                                     <div id="output"></div>
                                                 </div>
                                             </div>
@@ -83,7 +88,7 @@
                                             <div class="col-md-12">
                                                 <div class="form-group">
                                                     <label class="control-label" for="">Description</label>
-                                                    <textarea id="description" name="description" type="text" onkeyup="adapter" placeholder="Description" class="form-control input-md"></textarea>
+                                                    <textarea id="description" name="description" type="text" onkeyup="adapter" placeholder="Description" required="true" class="form-control input-md"></textarea>
                                                 </div>
                                             </div>
                                         </div>
@@ -97,6 +102,54 @@
                     </div>
                 </div>
             </div>
+        </div>
+        <div class="container" id="mesAnnonces">
+            <div class="row">
+                <div class="col-md-5">
+                    <h2>Mes Annonces</h2>
+                </div>
+            </div>
+            <?php
+            foreach($annoncesList as $key => $annonceListes):
+            $SportAnnonce = $connexionSport->getIdSportAnnonce($annonceListes->getIdSport());
+            ?>
+            <div class="row">
+                <div class="col-md-8 col-md-offset-2">
+                    <div class="elements">
+                        <div class="element">
+                            <div class="title">
+                                <div class="row">
+                                    <div class="span7">
+                                        <h2>
+                                            <span class="label"><?php echo ucfirst($annonceListes->getTitre());?></span>
+                                        </h2>
+                                    </div>
+                                    <div class="span2 pull-right date"><?php echo $annonceListes->getDatePublication();?></div>
+                                </div>
+                                <div class="row">
+                                    <div class="span6">
+                                        <div class="loc">
+                                            <i class="fa fa-map-marker" aria-hidden="true"></i> <?php echo $annonceListes->getCodePostal();?>
+                                        </div>
+                                        <div class="sport">
+                                            <i class="fa fa-futbol-o" aria-hidden="true"></i> <?php echo $SportAnnonce->getIntitule();?>
+                                        </div>
+                                        <div class="dateEven">
+                                            <i class="fa fa-calendar" aria-hidden="true"></i> <?php echo $annonceListes->getDateEvenement();?>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="content">
+                                <?php echo $annonceListes->getDescription();?>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <?php
+            endforeach
+            ?>
         </div>
     </div>
 </div>  

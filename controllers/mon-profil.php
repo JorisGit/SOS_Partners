@@ -4,6 +4,10 @@
 
     $sportList = $connexionSport->getList();
 
+    $connexionAnnonce = new AnnoncesManager(getDb());
+
+    $annoncesList = $connexionAnnonce->getMesAnnonces($myProfil->getId());
+
     if(isset($_POST['ajouterannonce'])){
         $annonce = array(
             'titre' => htmlspecialchars($_POST['titre']),
@@ -14,7 +18,7 @@
             'sport' => htmlspecialchars($_POST['sport']),
             'codePostal' => htmlspecialchars($_POST['code']),
             'description' => htmlspecialchars($_POST['description']),
-            'idProfil' => $myProfil->getId()
+            'id_Profil' => $myProfil->getId()
         );
 
         $dateEvenement = $annonce['annee'].'-'.$annonce['mois'].'-'.$annonce['jour'];
@@ -22,8 +26,8 @@
         $annonce['dateEvenement'] = $dateEvenement;
         $Sport = $connexionSport->get($annonce['sport']);
 
-        $annonce['idSport'] = $Sport->getId();
-
+        $annonce['id_Sport'] = $Sport->getId();
+        
         $annonces = new Annonces($annonce);
         $annoncesManager = new AnnoncesManager(getDb());
         $ajout = $annoncesManager->insert($annonces);

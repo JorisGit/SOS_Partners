@@ -21,7 +21,9 @@ h3 {
 #inscription h2,
 #config-profil h2,
 #annonces h2,
-#annonces h3 {
+#annonces h3,
+#mon-profil h2,
+#mon-profil h3 {
     font-family: 'Lobster';
 }
 
@@ -404,6 +406,33 @@ footer {
     background-repeat: no-repeat;
     background-position: center;
     float: left;
+}
+
+.elements .element {
+    border-bottom: 1px solid #CCC;
+    padding: 15px 0;
+}
+
+.elements .element .title .row {
+    margin-bottom: 10px;
+}
+
+.elements .element .title * {
+    font-size: 12px;
+    margin: 0;
+    padding: 0;
+    line-height: 18px;
+}
+
+.elements .element .title .date {
+    font-size: 11px;
+    text-align: right;
+    font-style: italic;
+}
+
+[class*="span"] {
+    float: left;
+    min-height: 1px;
 }
 
 

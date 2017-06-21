@@ -33,7 +33,7 @@ class AnnoncesManager{
     }
 
     public function update(Annonces $annonces){
-        $req = $this->_db->prepare('UPDATE annonces SET titre = :titre, description = :description, codePostal = :codePostal, datePublication = :datePublication, dateEvenement = :dateEvenement, nbParticipant = :nbParticipant, id_profil = :id_profil, id_sport = :id_sport  WHERE id = :id');
+        $req = $this->_db->prepare('UPDATE annonce SET titre = :titre, description = :description, codePostal = :codePostal, datePublication = :datePublication, dateEvenement = :dateEvenement, nbParticipant = :nbParticipant, id_profil = :id_profil, id_sport = :id_sport  WHERE id = :id');
 
         $req->bindValue(':sport', strtolower($annonces->getSport()));
         $req->bindValue(':localisation', strtolower($annonces->getLocalisation()));
@@ -45,9 +45,9 @@ class AnnoncesManager{
 
     public function get($info) {
         if(is_string($info)) {
-            $req = $this->_db->query('SELECT * FROM annonces WHERE titre = '.$info);   
+            $req = $this->_db->query('SELECT * FROM annonce WHERE titre = '.$info);   
         } else {
-            $req = $this->_db->query('SELECT * FROM annonces WHERE id = '.$info);   
+            $req = $this->_db->query('SELECT * FROM annonce WHERE id = '.$info);   
         }
         return new Annonces($req->fetch(PDO::FETCH_ASSOC));
     }
@@ -58,6 +58,18 @@ class AnnoncesManager{
         $req = $this->_db->query('SELECT * FROM annonce');
 
         while ($data = $req->fetch(PDO::FETCH_ASSOC)) {
+            $annoncesList[] = new Annonces($data);
+        }
+        
+        return $annoncesList;
+    }
+
+    public function getMesAnnonces($id_Profil) {
+        $annoncesList = [];
+
+        $req = $this->_db->query('SELECT * FROM annonce WHERE id_profil = '.$id_Profil);
+
+        while($data = $req->fetch(PDO::FETCH_ASSOC)) {
             $annoncesList[] = new Annonces($data);
         }
         

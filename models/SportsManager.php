@@ -45,8 +45,15 @@ class SportsManager {
         $req->bindValue(':sport', $info);
         $req->execute();
         $donnee = $req->fetch(PDO::FETCH_ASSOC);
+        return new Sports($donnee);
+    }
 
-        echo gettype($donnee);
+    public function getIdSportAnnonce($info) {
+        $req = $this->_db->prepare('SELECT * FROM sport WHERE id = :sport');
+
+        $req->bindValue(':sport', $info);
+        $req->execute();
+        $donnee = $req->fetch(PDO::FETCH_ASSOC);
 
         return new Sports($donnee);
     }
