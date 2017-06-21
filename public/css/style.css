@@ -435,6 +435,18 @@ footer {
     margin: 50px auto;
 }
 
+#output {
+    clear: left;
+    width: 100%;
+    z-index: 2;
+}
+
+#output a {
+    background: white;
+    display: block;
+    padding: 2px;
+}
+
 
 /* PAGE 404 */
 
